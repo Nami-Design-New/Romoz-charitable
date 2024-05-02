@@ -376,7 +376,7 @@ header .inner .navbar .navbar-nav .navLink.active {
     gap: 8px;
     background: #fff;
     height: 100%;
-    box-shadow: rgba(0, 0, 0, 0.1019607843) -20px 0px 9px -4px;
+    box-shadow: rgba(0, 0, 0, 0.1019607843) -20px 10px 9px -4px;
     width: 300px;
     text-align: start;
     padding: 24px;
@@ -389,7 +389,6 @@ header .inner .navbar .navbar-nav .navLink.active {
   }
   header .inner .navbar .navbar-nav .navLink {
     flex: unset;
-    color: var(--mainColor);
   }
   header .inner .navbar .navbar-nav .navLink.active {
     border-radius: 8px;

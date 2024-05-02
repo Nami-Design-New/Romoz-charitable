@@ -358,7 +358,7 @@ header {
           gap: 8px;
           background: #fff;
           height: 100%;
-          box-shadow: #0000001a -20px 0px 9px -4px;
+          box-shadow: #0000001a -20px 10px 9px -4px;
           width: 300px;
           text-align: start;
           padding: 24px;
@@ -370,7 +370,7 @@ header {
           }
           .navLink {
             flex: unset;
-            color: var(--mainColor);
+            // color: var(--mainColor);
           }
           .navLink.active {
             border-radius: 8px;
