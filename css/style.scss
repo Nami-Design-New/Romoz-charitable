@@ -679,16 +679,21 @@ footer {
     flex-direction: column;
     gap: 4px;
     height: 100%;
+    transition: var(--transition);
     .projectImg {
       position: relative;
       overflow: hidden;
       border-radius: 16px;
+      aspect-ratio: 1;
+      width: 100%;
+      transition: var(--transition);
       img {
-        width: 100%;
         aspect-ratio: 1;
+        width: 100%;
         max-height: 300px;
         object-fit: cover;
         object-position: center;
+        transition: var(--transition);
       }
     }
     .projectInfo {
@@ -703,7 +708,6 @@ footer {
       .description {
         color: var(--grayColor);
         flex: 1;
-
       }
       .gifts {
         display: flex;
@@ -731,7 +735,7 @@ footer {
             background-color: var(--mainColor);
             color: var(--whiteColor);
           }
-          &.donate{
+          &.donate {
             min-width: 250px;
           }
         }
@@ -786,11 +790,18 @@ footer {
         }
       }
     }
+    &:hover {
+      transform: translateY(-8px);
+      background-color: var(--whiteColor);
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.08);
+      .projectImg {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
   }
 }
-
-
-
 .loadMore {
   display: flex;
   justify-content: center;
