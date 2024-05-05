@@ -223,7 +223,7 @@ content {
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      filter: grayscale(1) opacity(0.5);
+      filter: brightness(0) opacity(0.5);
     }
     @keyframes slide-up {
       from {
@@ -417,13 +417,13 @@ header {
           min-width: 16px;
           height: 16px;
           transition: var(--transition);
-          filter: grayscale(1) opacity(0.6);
+          filter: brightness(0) opacity(0.6);
         }
         &:hover {
           background-color: var(--mainColor);
           color: var(--whiteColor);
           img {
-            filter: grayscale(1) opacity(1) invert(1);
+            filter: brightness(0) opacity(1) invert(1);
           }
         }
       }
@@ -551,7 +551,7 @@ footer {
         background-repeat: no-repeat;
         background-size: contain;
         transition: var(--transition);
-        filter: grayscale(1);
+        filter: brightness(0);
         transform: scaleX(-1);
         @media (max-width: 768px) {
           font-size: 24px;
@@ -631,7 +631,7 @@ footer {
       object-position: center;
     }
   }
-  .swiperControl{
+  .swiperControl {
     position: absolute;
     bottom: 0px;
     left: 0;
@@ -643,8 +643,6 @@ footer {
     }
   }
 }
-
-
 .sectionTitle {
   font-weight: bold;
   text-transform: capitalize;
@@ -673,7 +671,142 @@ footer {
     border-radius: 12px;
   }
 }
-
-.project{
+.projects {
   padding: 40px 0;
+  .project {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 100%;
+    .projectImg {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      img {
+        width: 100%;
+        aspect-ratio: 1;
+        max-height: 300px;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+    .projectInfo {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      flex: 1;
+      padding: 8px;
+      .title {
+        font-weight: bold;
+      }
+      .description {
+        color: var(--grayColor);
+        flex: 1;
+
+      }
+      .gifts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 8px 0;
+        flex: 1;
+        .gift {
+          display: flex;
+          flex: 1;
+          min-width: 120px;
+          justify-content: center;
+          align-items: center;
+          gap: 4px;
+          padding: 8px 8px;
+          border-radius: 8px;
+          background-color: #eeeeee;
+          color: var(--darkColor);
+          font-size: 14px;
+          transition: var(--transition);
+          span {
+            font-weight: bold;
+          }
+          &:hover {
+            background-color: var(--mainColor);
+            color: var(--whiteColor);
+          }
+          &.donate{
+            min-width: 250px;
+          }
+        }
+      }
+      .actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        .inputDiv {
+          position: relative;
+          border: 1px solid var(--mainColor20);
+          padding: 8px;
+          border-radius: 4px;
+          flex: 1;
+          display: flex;
+          align-items: center;
+          input {
+            width: 100%;
+            border: none;
+          }
+          span {
+            font-size: 12px;
+            font-weight: bold;
+            color: var(--mainColor);
+          }
+        }
+        .action {
+          color: var(--darkColor);
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          padding: 8px;
+          justify-content: center;
+          background-color: var(--mainColor10);
+          height: 40px;
+          min-width: 40px;
+          border-radius: 100px;
+          transition: var(--transition);
+          font-weight: bold;
+          img {
+            min-width: 20px;
+            height: 20px;
+            transition: var(--transition);
+          }
+          &:hover {
+            background-color: var(--mainColor);
+            color: var(--whiteColor);
+            img {
+              filter: brightness(0) invert(1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+.loadMore {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
+  .spin {
+    animation: spin 1s linear infinite;
+    width: 24px;
+    height: 24px;
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 }

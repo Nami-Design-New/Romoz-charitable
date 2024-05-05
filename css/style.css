@@ -245,7 +245,7 @@ content {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  filter: grayscale(1) opacity(0.5);
+  filter: brightness(0) opacity(0.5);
 }
 @keyframes slide-up {
   from {
@@ -439,14 +439,14 @@ header .inner .moreActions a img {
   min-width: 16px;
   height: 16px;
   transition: var(--transition);
-  filter: grayscale(1) opacity(0.6);
+  filter: brightness(0) opacity(0.6);
 }
 header .inner .moreActions a:hover {
   background-color: var(--mainColor);
   color: var(--whiteColor);
 }
 header .inner .moreActions a:hover img {
-  filter: grayscale(1) opacity(1) invert(1);
+  filter: brightness(0) opacity(1) invert(1);
 }
 header.headerAnimate {
   box-shadow: 0px 20px 100px rgba(0, 0, 0, 0.1019607843);
@@ -575,7 +575,7 @@ footer .border-top {
   background-repeat: no-repeat;
   background-size: contain;
   transition: var(--transition);
-  filter: grayscale(1);
+  filter: brightness(0);
   transform: scaleX(-1);
 }
 @media (max-width: 768px) {
@@ -702,6 +702,141 @@ footer .border-top {
   border-radius: 12px;
 }
 
-.project {
+.projects {
   padding: 40px 0;
+}
+.projects .project {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 100%;
+}
+.projects .project .projectImg {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
+.projects .project .projectImg img {
+  width: 100%;
+  aspect-ratio: 1;
+  max-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.projects .project .projectInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  padding: 8px;
+}
+.projects .project .projectInfo .title {
+  font-weight: bold;
+}
+.projects .project .projectInfo .description {
+  color: var(--grayColor);
+  flex: 1;
+}
+.projects .project .projectInfo .gifts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0;
+  flex: 1;
+}
+.projects .project .projectInfo .gifts .gift {
+  display: flex;
+  flex: 1;
+  min-width: 120px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 8px;
+  border-radius: 8px;
+  background-color: #eeeeee;
+  color: var(--darkColor);
+  font-size: 14px;
+  transition: var(--transition);
+}
+.projects .project .projectInfo .gifts .gift span {
+  font-weight: bold;
+}
+.projects .project .projectInfo .gifts .gift:hover {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+}
+.projects .project .projectInfo .gifts .gift.donate {
+  min-width: 250px;
+}
+.projects .project .projectInfo .actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.projects .project .projectInfo .actions .inputDiv {
+  position: relative;
+  border: 1px solid var(--mainColor20);
+  padding: 8px;
+  border-radius: 4px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.projects .project .projectInfo .actions .inputDiv input {
+  width: 100%;
+  border: none;
+}
+.projects .project .projectInfo .actions .inputDiv span {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--mainColor);
+}
+.projects .project .projectInfo .actions .action {
+  color: var(--darkColor);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  justify-content: center;
+  background-color: var(--mainColor10);
+  height: 40px;
+  min-width: 40px;
+  border-radius: 100px;
+  transition: var(--transition);
+  font-weight: bold;
+}
+.projects .project .projectInfo .actions .action img {
+  min-width: 20px;
+  height: 20px;
+  transition: var(--transition);
+}
+.projects .project .projectInfo .actions .action:hover {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+}
+.projects .project .projectInfo .actions .action:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.loadMore {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
+}
+.loadMore .spin {
+  animation: spin 1s linear infinite;
+  width: 24px;
+  height: 24px;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=style.css.map */
