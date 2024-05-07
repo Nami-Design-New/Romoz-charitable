@@ -164,6 +164,13 @@ $(document).ready(function () {
         .next()
         .val(+$(this).next().val() - 1);
   });
+
+  $(".copyText").click(function () {
+    var text = $(this).prev("p").text();
+    navigator.clipboard.writeText(text).then(function () {
+      $("#alertMessage").slideDown().delay(1500).fadeOut();
+    });
+  });
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////
