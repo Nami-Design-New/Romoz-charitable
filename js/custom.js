@@ -61,7 +61,7 @@ $(document).ready(function () {
     speed: 500,
     effect: "fade",
     autoplay: {
-      delay: 3000,
+      delay: 2000,
       disableOnInteraction: false,
     },
     pagination: {
