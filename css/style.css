@@ -710,10 +710,60 @@ footer .border-top {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  padding: 8px;
   height: 100%;
   border-radius: 8px;
   transition: var(--transition);
+}
+.projects .project .shareProject {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  padding: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  transform: translateY(30px);
+  background-color: var(--whiteColor);
+  border-radius: 100px;
+}
+.projects .project .shareProject a {
+  background-color: var(--whiteColor);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+}
+.projects .project .shareProject a img {
+  transition: var(--transition);
+  width: 16px;
+  height: 16px;
+}
+.projects .project .shareProject a:hover.twitter {
+  background-color: #1DA1F2;
+}
+.projects .project .shareProject a:hover.facebook {
+  background-color: #1877F2;
+}
+.projects .project .shareProject a:hover.whatsapp {
+  background-color: #25D366;
+}
+.projects .project .shareProject a:hover.instagram {
+  background-color: #E1306C;
+}
+.projects .project .shareProject a:hover img {
+  filter: brightness(0) invert(1);
+}
+.projects .project .shareProject a.share {
+  background-color: var(--mainColor);
+}
+.projects .project .shareProject a.share img {
+  filter: brightness(0) invert(1);
 }
 .projects .project .projectImg {
   position: relative;
@@ -738,7 +788,7 @@ footer .border-top {
   flex-direction: column;
   gap: 4px;
   flex: 1;
-  padding: 8px;
+  padding: 16px;
 }
 .projects .project .projectInfo .title {
   font-weight: bold;
@@ -835,6 +885,11 @@ footer .border-top {
 }
 .projects .project:hover .projectImg img {
   transform: scale(1.1);
+}
+.projects .project:hover .shareProject {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .loadMore {
