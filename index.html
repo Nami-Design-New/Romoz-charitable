@@ -83,7 +83,7 @@
       </div>
       </div>
       <!-- swiper Control -->
-      <div class="swiperControl">
+      <div class="swiperControl" data-aos="fade-up">
         <div class="mainSliderPagination swiper-pagination"></div>
         <div class="swiperBtns">
           <div class="mainSliderPrev swiper-button-prev"></div>
@@ -94,27 +94,47 @@
     <!-- categories -->
     <section class="categories">
       <div class="container">
-        <h2 class="sectionTitle" data-aos="fade-up"> الفئات </h2>
-        <div class="row">
-          <div class="col-sm-6 col-lg-4 col-xxl-3 p-1" data-aos="fade-up">
-            <div class="category">
-              <a href="#!">
-                <img src="img/categoryImg.jpg" alt="">
-              </a>
-              <a href="#!">
-                <h3> الفئة الاولى </h3>
-              </a>
+        <h2 class="sectionTitle" data-aos="fade-up"> أقسام التبرعات </h2>
+
+        <!-- category Slider -->
+          <div class="swiper categorySlider ">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" data-aos="fade-up">
+                <a href="#!" class="category">
+                  <img src="img/icons/general projects.svg" alt="">
+                  <span> المشاريع العامة </span>
+                </a>
+              </div>
+              <div class="swiper-slide" data-aos="fade-up">
+                <a href="#!" class="category">
+                  <img src="img/icons/mecca.svg" alt="">
+                  <span> الوقف بمكة                  </span>
+                </a>
+              </div>
+              <div class="swiper-slide" data-aos="fade-up">
+                <a href="#!" class="category">
+                  <img src="img/icons/gifts.svg" alt="">
+                  <span> الاهداءات  </span>
+                </a>
+              </div>
+             
+            </div>
+            <!-- swiper Control -->
+            <div class="swiperControl" data-aos="fade-up">
+              <!-- <div class="categorySliderPagination swiper-pagination"></div> -->
+              <div class="swiperBtns">
+                <div class="categorySliderPrev swiper-button-prev"></div>
+                <div class="categorySliderNext swiper-button-next"></div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
     </section>
     <!-- project -->
     <section class="projects">
       <div class="container">
         <h2 class="sectionTitle" data-aos="fade-up"> مشاريع تنتظر دعمكم </h2>
         <div class="row">
-          <div class="col-sm-6 col-lg-4 col-xxl-3 p-1" data-aos="fade-up">
+          <div class="col-sm-6 col-lg-4 col-xxl-3 p-1 p-lg-2" data-aos="fade-up">
             <div class="project">
               <div class="shareProject">
                 <a href="#!" class="share"> <img src="img/icons/share.svg" alt=""> </a>
@@ -138,9 +158,14 @@
                   <button class="gift donate"> بما تجود به نفسك (التبرع بأي مبلغ) </button>
                 </div>
                 <div class="actions">
-                  <div class="inputDiv">
+                  <!-- <div class="inputDiv">
                     <input type="number" min="0" placeholder="ادخل المبلغ">
                     <span> ريال </span>
+                  </div> -->
+                  <div class="quantity">
+                    <button class="min"> - </button>
+                    <input type="text" class="qty" value="0" min="0" />
+                    <button class="plus"> + </button>
                   </div>
                   <a href="#!" class="action" data-bs-toggle="tooltip" title=" اضافة للسلة "> <img
                       src="img/icons/cartAdd.svg" alt="اضافة للسلة"> </a>
@@ -152,7 +177,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-4 col-xxl-3 p-1" data-aos="fade-up">
+          <div class="col-sm-6 col-lg-4 col-xxl-3 p-1 p-lg-2" data-aos="fade-up">
             <div class="project">
               <div class="shareProject">
                 <a href="#!" class="share"> <img src="img/icons/share.svg" alt=""> </a>
@@ -193,7 +218,51 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-4 col-xxl-3 p-1" data-aos="fade-up">
+
+          <div class="col-sm-6 col-lg-4 col-xxl-3 p-1 p-lg-2" data-aos="fade-up">
+            <div class="project">
+              <div class="shareProject">
+                <a href="#!" class="share"> <img src="img/icons/share.svg" alt=""> </a>
+                <a href="#!" class="twitter" data-bs-toggle="tooltip" title=" تويتر "> <img src="img/icons/twitter.svg"
+                    alt=""> </a>
+                <a href="#!" class="whatsapp" data-bs-toggle="tooltip" title=" واتساب "> <img
+                    src="img/icons/whatsapp.svg" alt=""> </a>
+                <a href="#!" class="instagram" data-bs-toggle="tooltip" title=" انستجرام "> <img
+                    src="img/icons/instagram.svg" alt=""> </a>
+                <a href="#!" class="facebook" data-bs-toggle="tooltip" title=" فيسبوك "> <img
+                    src="img/icons/facebook.svg" alt=""> </a>
+              </div>
+              <a href="#!" class="projectImg">
+                <img src="img/sliderImg.jpg" loading="lazy" alt="">
+              </a>
+              <div class="projectInfo">
+                <h5 class="title"> التدريب والتأهيل للايتام </h5>
+                <p class="description"> أسّس صدقتك الجارية بمريب والتأهيل للايتام</p>
+                <div class="gifts">
+                  <button class="gift"> 2 سهم <span> 400 </span> ريال </button>
+                  <button class="gift donate"> بما تجود به نفسك (التبرع بأي مبلغ) </button>
+                </div>
+                <div class="actions">
+                  <!-- <div class="inputDiv">
+                    <input type="number" min="0" placeholder="ادخل المبلغ">
+                    <span> ريال </span>
+                  </div> -->
+                  <div class="quantity">
+                    <button class="min"> - </button>
+                    <input type="text" class="qty" value="0" min="0" />
+                    <button class="plus"> + </button>
+                  </div>
+                  <a href="#!" class="action" data-bs-toggle="tooltip" title=" اضافة للسلة "> <img
+                      src="img/icons/cartAdd.svg" alt="اضافة للسلة"> </a>
+                  <a href="#!" class="action" data-bs-toggle="tooltip" title=" تبرع "> <img
+                      src="img/icons/donateAdd.svg" alt="تبرع"> </a>
+                  <a href="#!" class="action" data-bs-toggle="tooltip" title=" إهداء لمن تحب "> <img
+                      src="img/icons/giftAdd.svg" alt="إهداء لمن تحب"> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 col-xxl-3 p-1 p-lg-2" data-aos="fade-up">
             <div class="project">
               <div class="shareProject">
                 <a href="#!" class="share"> <img src="img/icons/share.svg" alt=""> </a>
@@ -234,7 +303,51 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-4 col-xxl-3 p-1" data-aos="fade-up">
+
+          <div class="col-sm-6 col-lg-4 col-xxl-3 p-1 p-lg-2" data-aos="fade-up">
+            <div class="project">
+              <div class="shareProject">
+                <a href="#!" class="share"> <img src="img/icons/share.svg" alt=""> </a>
+                <a href="#!" class="twitter" data-bs-toggle="tooltip" title=" تويتر "> <img src="img/icons/twitter.svg"
+                    alt=""> </a>
+                <a href="#!" class="whatsapp" data-bs-toggle="tooltip" title=" واتساب "> <img
+                    src="img/icons/whatsapp.svg" alt=""> </a>
+                <a href="#!" class="instagram" data-bs-toggle="tooltip" title=" انستجرام "> <img
+                    src="img/icons/instagram.svg" alt=""> </a>
+                <a href="#!" class="facebook" data-bs-toggle="tooltip" title=" فيسبوك "> <img
+                    src="img/icons/facebook.svg" alt=""> </a>
+              </div>
+              <a href="#!" class="projectImg">
+                <img src="img/sliderImg.jpg" loading="lazy" alt="">
+              </a>
+              <div class="projectInfo">
+                <h5 class="title"> التدريب والتأهيل للايتام </h5>
+                <p class="description"> أسّس صدقتك الجارية بمريب والتأهيل للايتام</p>
+                <div class="gifts">
+                  <button class="gift"> 2 سهم <span> 400 </span> ريال </button>
+                  <button class="gift donate"> بما تجود به نفسك (التبرع بأي مبلغ) </button>
+                </div>
+                <div class="actions">
+                  <!-- <div class="inputDiv">
+                    <input type="number" min="0" placeholder="ادخل المبلغ">
+                    <span> ريال </span>
+                  </div> -->
+                  <div class="quantity">
+                    <button class="min"> - </button>
+                    <input type="text" class="qty" value="0" min="0" />
+                    <button class="plus"> + </button>
+                  </div>
+                  <a href="#!" class="action" data-bs-toggle="tooltip" title=" اضافة للسلة "> <img
+                      src="img/icons/cartAdd.svg" alt="اضافة للسلة"> </a>
+                  <a href="#!" class="action" data-bs-toggle="tooltip" title=" تبرع "> <img
+                      src="img/icons/donateAdd.svg" alt="تبرع"> </a>
+                  <a href="#!" class="action" data-bs-toggle="tooltip" title=" إهداء لمن تحب "> <img
+                      src="img/icons/giftAdd.svg" alt="إهداء لمن تحب"> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 col-xxl-3 p-1 p-lg-2" data-aos="fade-up">
             <div class="project">
               <div class="shareProject">
                 <a href="#!" class="share"> <img src="img/icons/share.svg" alt=""> </a>
@@ -275,7 +388,51 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-4 col-xxl-3 p-1" data-aos="fade-up">
+
+          <div class="col-sm-6 col-lg-4 col-xxl-3 p-1 p-lg-2" data-aos="fade-up">
+            <div class="project">
+              <div class="shareProject">
+                <a href="#!" class="share"> <img src="img/icons/share.svg" alt=""> </a>
+                <a href="#!" class="twitter" data-bs-toggle="tooltip" title=" تويتر "> <img src="img/icons/twitter.svg"
+                    alt=""> </a>
+                <a href="#!" class="whatsapp" data-bs-toggle="tooltip" title=" واتساب "> <img
+                    src="img/icons/whatsapp.svg" alt=""> </a>
+                <a href="#!" class="instagram" data-bs-toggle="tooltip" title=" انستجرام "> <img
+                    src="img/icons/instagram.svg" alt=""> </a>
+                <a href="#!" class="facebook" data-bs-toggle="tooltip" title=" فيسبوك "> <img
+                    src="img/icons/facebook.svg" alt=""> </a>
+              </div>
+              <a href="#!" class="projectImg">
+                <img src="img/sliderImg.jpg" loading="lazy" alt="">
+              </a>
+              <div class="projectInfo">
+                <h5 class="title"> التدريب والتأهيل للايتام </h5>
+                <p class="description"> أسّس صدقتك الجارية بمريب والتأهيل للايتام</p>
+                <div class="gifts">
+                  <button class="gift"> 2 سهم <span> 400 </span> ريال </button>
+                  <button class="gift donate"> بما تجود به نفسك (التبرع بأي مبلغ) </button>
+                </div>
+                <div class="actions">
+                  <!-- <div class="inputDiv">
+                    <input type="number" min="0" placeholder="ادخل المبلغ">
+                    <span> ريال </span>
+                  </div> -->
+                  <div class="quantity">
+                    <button class="min"> - </button>
+                    <input type="text" class="qty" value="0" min="0" />
+                    <button class="plus"> + </button>
+                  </div>
+                  <a href="#!" class="action" data-bs-toggle="tooltip" title=" اضافة للسلة "> <img
+                      src="img/icons/cartAdd.svg" alt="اضافة للسلة"> </a>
+                  <a href="#!" class="action" data-bs-toggle="tooltip" title=" تبرع "> <img
+                      src="img/icons/donateAdd.svg" alt="تبرع"> </a>
+                  <a href="#!" class="action" data-bs-toggle="tooltip" title=" إهداء لمن تحب "> <img
+                      src="img/icons/giftAdd.svg" alt="إهداء لمن تحب"> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-4 col-xxl-3 p-1 p-lg-2" data-aos="fade-up">
             <div class="project">
               <div class="shareProject">
                 <a href="#!" class="share"> <img src="img/icons/share.svg" alt=""> </a>
@@ -316,129 +473,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-lg-4 col-xxl-3 p-1" data-aos="fade-up">
-            <div class="project">
-              <div class="shareProject">
-                <a href="#!" class="share"> <img src="img/icons/share.svg" alt=""> </a>
-                <a href="#!" class="twitter" data-bs-toggle="tooltip" title=" تويتر "> <img src="img/icons/twitter.svg"
-                    alt=""> </a>
-                <a href="#!" class="whatsapp" data-bs-toggle="tooltip" title=" واتساب "> <img
-                    src="img/icons/whatsapp.svg" alt=""> </a>
-                <a href="#!" class="instagram" data-bs-toggle="tooltip" title=" انستجرام "> <img
-                    src="img/icons/instagram.svg" alt=""> </a>
-                <a href="#!" class="facebook" data-bs-toggle="tooltip" title=" فيسبوك "> <img
-                    src="img/icons/facebook.svg" alt=""> </a>
-              </div>
-              <a href="#!" class="projectImg">
-                <img src="img/sliderImg.jpg" loading="lazy" alt="">
-              </a>
-              <div class="projectInfo">
-                <h5 class="title"> التدريب والتأهيل للايتام </h5>
-                <p class="description"> أسّس صدقتك الجارية بمكة داخل حدود الحرم: اجعل تأثيرك يستمر ويتجدد بصدقاتك
-                  الجارية. شارك في بناء
-                  مشتركة الايتام والتدريب والتأهيل للايتام</p>
-                <div class="gifts">
-                  <button class="gift"> سهم <span> 200 </span> ريال </button>
-                  <button class="gift"> 2 سهم <span> 400 </span> ريال </button>
-                  <button class="gift donate"> بما تجود به نفسك (التبرع بأي مبلغ) </button>
-                </div>
-                <div class="actions">
-                  <div class="inputDiv">
-                    <input type="number" min="0" placeholder="ادخل المبلغ">
-                    <span> ريال </span>
-                  </div>
-                  <a href="#!" class="action" data-bs-toggle="tooltip" title=" اضافة للسلة "> <img
-                      src="img/icons/cartAdd.svg" alt="اضافة للسلة"> </a>
-                  <a href="#!" class="action" data-bs-toggle="tooltip" title=" تبرع "> <img
-                      src="img/icons/donateAdd.svg" alt="تبرع"> </a>
-                  <a href="#!" class="action" data-bs-toggle="tooltip" title=" إهداء لمن تحب "> <img
-                      src="img/icons/giftAdd.svg" alt="إهداء لمن تحب"> </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-4 col-xxl-3 p-1" data-aos="fade-up">
-            <div class="project">
-              <div class="shareProject">
-                <a href="#!" class="share"> <img src="img/icons/share.svg" alt=""> </a>
-                <a href="#!" class="twitter" data-bs-toggle="tooltip" title=" تويتر "> <img src="img/icons/twitter.svg"
-                    alt=""> </a>
-                <a href="#!" class="whatsapp" data-bs-toggle="tooltip" title=" واتساب "> <img
-                    src="img/icons/whatsapp.svg" alt=""> </a>
-                <a href="#!" class="instagram" data-bs-toggle="tooltip" title=" انستجرام "> <img
-                    src="img/icons/instagram.svg" alt=""> </a>
-                <a href="#!" class="facebook" data-bs-toggle="tooltip" title=" فيسبوك "> <img
-                    src="img/icons/facebook.svg" alt=""> </a>
-              </div>
-              <a href="#!" class="projectImg">
-                <img src="img/sliderImg.jpg" loading="lazy" alt="">
-              </a>
-              <div class="projectInfo">
-                <h5 class="title"> التدريب والتأهيل للايتام </h5>
-                <p class="description"> أسّس صدقتك الجارية بمكة داخل حدود الحرم: اجعل تأثيرك يستمر ويتجدد بصدقاتك
-                  الجارية. شارك في بناء
-                  مشتركة الايتام والتدريب والتأهيل للايتام</p>
-                <div class="gifts">
-                  <button class="gift"> سهم <span> 200 </span> ريال </button>
-                  <button class="gift"> 2 سهم <span> 400 </span> ريال </button>
-                  <button class="gift donate"> بما تجود به نفسك (التبرع بأي مبلغ) </button>
-                </div>
-                <div class="actions">
-                  <div class="inputDiv">
-                    <input type="number" min="0" placeholder="ادخل المبلغ">
-                    <span> ريال </span>
-                  </div>
-                  <a href="#!" class="action" data-bs-toggle="tooltip" title=" اضافة للسلة "> <img
-                      src="img/icons/cartAdd.svg" alt="اضافة للسلة"> </a>
-                  <a href="#!" class="action" data-bs-toggle="tooltip" title=" تبرع "> <img
-                      src="img/icons/donateAdd.svg" alt="تبرع"> </a>
-                  <a href="#!" class="action" data-bs-toggle="tooltip" title=" إهداء لمن تحب "> <img
-                      src="img/icons/giftAdd.svg" alt="إهداء لمن تحب"> </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6 col-lg-4 col-xxl-3 p-1" data-aos="fade-up">
-            <div class="project">
-              <div class="shareProject">
-                <a href="#!" class="share"> <img src="img/icons/share.svg" alt=""> </a>
-                <a href="#!" class="twitter" data-bs-toggle="tooltip" title=" تويتر "> <img src="img/icons/twitter.svg"
-                    alt=""> </a>
-                <a href="#!" class="whatsapp" data-bs-toggle="tooltip" title=" واتساب "> <img
-                    src="img/icons/whatsapp.svg" alt=""> </a>
-                <a href="#!" class="instagram" data-bs-toggle="tooltip" title=" انستجرام "> <img
-                    src="img/icons/instagram.svg" alt=""> </a>
-                <a href="#!" class="facebook" data-bs-toggle="tooltip" title=" فيسبوك "> <img
-                    src="img/icons/facebook.svg" alt=""> </a>
-              </div>
-              <a href="#!" class="projectImg">
-                <img src="img/sliderImg.jpg" loading="lazy" alt="">
-              </a>
-              <div class="projectInfo">
-                <h5 class="title"> التدريب والتأهيل للايتام </h5>
-                <p class="description"> أسّس صدقتك الجارية بمكة داخل حدود الحرم: اجعل تأثيرك يستمر ويتجدد بصدقاتك
-                  الجارية. شارك في بناء
-                  مشتركة الايتام والتدريب والتأهيل للايتام</p>
-                <div class="gifts">
-                  <button class="gift"> سهم <span> 200 </span> ريال </button>
-                  <button class="gift"> 2 سهم <span> 400 </span> ريال </button>
-                  <button class="gift donate"> بما تجود به نفسك (التبرع بأي مبلغ) </button>
-                </div>
-                <div class="actions">
-                  <div class="inputDiv">
-                    <input type="number" min="0" placeholder="ادخل المبلغ">
-                    <span> ريال </span>
-                  </div>
-                  <a href="#!" class="action" data-bs-toggle="tooltip" title=" اضافة للسلة "> <img
-                      src="img/icons/cartAdd.svg" alt="اضافة للسلة"> </a>
-                  <a href="#!" class="action" data-bs-toggle="tooltip" title=" تبرع "> <img
-                      src="img/icons/donateAdd.svg" alt="تبرع"> </a>
-                  <a href="#!" class="action" data-bs-toggle="tooltip" title=" إهداء لمن تحب "> <img
-                      src="img/icons/giftAdd.svg" alt="إهداء لمن تحب"> </a>
-                </div>
-              </div>
-            </div>
-          </div>
+
         </div>
         <a href="#!" class="loadMore" data-aos="fade-up">
           عرض المزيد

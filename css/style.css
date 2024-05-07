@@ -680,30 +680,34 @@ footer .border-top {
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
 }
 .sectionTitle::before {
   content: "";
-  width: 20px;
-  height: 8px;
-  position: absolute;
-  left: 0;
-  top: 8px;
+  display: block;
+  width: 40px;
+  height: 2px;
   background-color: var(--mainColor);
   border-radius: 12px;
 }
 .sectionTitle::after {
   content: "";
-  width: 8px;
-  height: 20px;
-  position: absolute;
-  left: 0;
-  top: 8px;
+  display: block;
+  width: 40px;
+  height: 2px;
   background-color: var(--mainColor);
   border-radius: 12px;
 }
 
 .projects {
-  padding: 40px 0;
+  padding: 80px 0;
+}
+.projects .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .projects .project {
   position: relative;
@@ -711,7 +715,7 @@ footer .border-top {
   flex-direction: column;
   gap: 4px;
   height: 100%;
-  border-radius: 8px;
+  border-radius: 16px;
   transition: var(--transition);
 }
 .projects .project .shareProject {
@@ -745,16 +749,16 @@ footer .border-top {
   height: 16px;
 }
 .projects .project .shareProject a:hover.twitter {
-  background-color: #1DA1F2;
+  background-color: #1da1f2;
 }
 .projects .project .shareProject a:hover.facebook {
-  background-color: #1877F2;
+  background-color: #1877f2;
 }
 .projects .project .shareProject a:hover.whatsapp {
-  background-color: #25D366;
+  background-color: #25d366;
 }
 .projects .project .shareProject a:hover.instagram {
-  background-color: #E1306C;
+  background-color: #e1306c;
 }
 .projects .project .shareProject a:hover img {
   filter: brightness(0) invert(1);
@@ -768,7 +772,7 @@ footer .border-top {
 .projects .project .projectImg {
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 16px;
   aspect-ratio: 1;
   width: 100%;
   transition: var(--transition);
@@ -812,7 +816,7 @@ footer .border-top {
   align-items: center;
   gap: 4px;
   padding: 8px 8px;
-  border-radius: 8px;
+  border-radius: 100px;
   background-color: #eeeeee;
   color: var(--darkColor);
   font-size: 14px;
@@ -831,25 +835,57 @@ footer .border-top {
 .projects .project .projectInfo .actions {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
 }
 .projects .project .projectInfo .actions .inputDiv {
   position: relative;
   border: 1px solid var(--mainColor20);
-  padding: 8px;
-  border-radius: 4px;
+  padding: 8px 16px;
+  border-radius: 100px;
   flex: 1;
   display: flex;
   align-items: center;
+  gap: 4px;
 }
 .projects .project .projectInfo .actions .inputDiv input {
   width: 100%;
   border: none;
   background: none;
+  height: 24px;
+  min-width: 40px;
 }
 .projects .project .projectInfo .actions .inputDiv span {
   font-size: 12px;
   font-weight: bold;
+  color: var(--mainColor);
+}
+.projects .project .projectInfo .actions .quantity {
+  position: relative;
+  border: 1px solid var(--mainColor20);
+  padding: 0px 8px;
+  border-radius: 100px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.projects .project .projectInfo .actions .quantity input {
+  min-width: 20px;
+  width: 100%;
+  border: none;
+  background: none;
+  text-align: center;
+  height: 24px;
+}
+.projects .project .projectInfo .actions .quantity button {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  font-size: 24px !important;
   color: var(--mainColor);
 }
 .projects .project .projectInfo .actions .action {
@@ -910,4 +946,79 @@ footer .border-top {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.categories {
+  background-color: var(--mainColor10);
+  background-image: url(../img/BG.svg);
+  background-size: 20px;
+  padding: 40px 0;
+  margin-top: 40px;
+}
+.categories .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.categories .categorySlider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.categories .category {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+  border-radius: 16px;
+  transition: var(--transition);
+  padding: 16px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.categories .category::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 110%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: var(--mainColor);
+  border-radius: 12px;
+  transform: translateY(100%);
+  transition: var(--transition);
+}
+.categories .category img {
+  width: 100%;
+  aspect-ratio: 1;
+  max-height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: var(--transition);
+}
+.categories .category span {
+  font-weight: bold;
+}
+.categories .category:hover {
+  color: var(--whiteColor);
+}
+.categories .category:hover img {
+  filter: brightness(0) invert(1);
+}
+.categories .category:hover::after {
+  transform: translateY(0);
+}
+.categories .swiper-wrapper {
+  justify-content: center;
+}
+.categories .swiperControl {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */

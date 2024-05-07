@@ -650,29 +650,34 @@ footer {
   padding-left: 16px;
   position: relative;
   width: fit-content;
+  display: flex;
+  // flex-direction: column;
+  align-items: baseline;
+  gap: 16px;
   &::before {
     content: "";
-    width: 20px;
-    height: 8px;
-    position: absolute;
-    left: 0;
-    top: 8px;
+    display: block;
+    width: 40px;
+    height: 2px;
     background-color: var(--mainColor);
     border-radius: 12px;
   }
   &::after {
     content: "";
-    width: 8px;
-    height: 20px;
-    position: absolute;
-    left: 0;
-    top: 8px;
+    display: block;
+    width: 40px;
+    height: 2px;
     background-color: var(--mainColor);
     border-radius: 12px;
   }
 }
 .projects {
-  padding: 40px 0;
+  padding: 80px 0;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .project {
     position: relative;
     display: flex;
@@ -680,9 +685,9 @@ footer {
     gap: 4px;
     // padding: 8px;
     height: 100%;
-    border-radius: 8px;
+    border-radius: 16px;
     transition: var(--transition);
-    .shareProject{
+    .shareProject {
       position: absolute;
       top: 8px;
       right: 8px;
@@ -697,8 +702,7 @@ footer {
       transform: translateY(30px);
       background-color: var(--whiteColor);
       border-radius: 100px;
-   
-      a{
+      a {
         background-color: var(--whiteColor);
         width: 32px;
         height: 32px;
@@ -706,47 +710,44 @@ footer {
         justify-content: center;
         align-items: center;
         border-radius: 100px;
-        img{
+        img {
           transition: var(--transition);
           width: 16px;
           height: 16px;
         }
-        &:hover{
-          &.twitter{
-            background-color: #1DA1F2;
+        &:hover {
+          &.twitter {
+            background-color: #1da1f2;
           }
-          &.facebook{
-            background-color: #1877F2;
+          &.facebook {
+            background-color: #1877f2;
           }
-          &.whatsapp{
-            background-color: #25D366;
+          &.whatsapp {
+            background-color: #25d366;
           }
-          &.instagram{
-            background-color: #E1306C;
+          &.instagram {
+            background-color: #e1306c;
           }
-          img{
+          img {
             filter: brightness(0) invert(1);
           }
         }
-        &.share{
+        &.share {
           background-color: var(--mainColor);
-          img{
+          img {
             filter: brightness(0) invert(1);
           }
         }
       }
-
-
     }
     .projectImg {
       position: relative;
       overflow: hidden;
-      border-radius: 8px;
+      border-radius: 16px;
       aspect-ratio: 1;
       width: 100%;
       transition: var(--transition);
       max-height: 300px;
-
       img {
         height: 100%;
         width: 100%;
@@ -782,7 +783,7 @@ footer {
           align-items: center;
           gap: 4px;
           padding: 8px 8px;
-          border-radius: 8px;
+          border-radius: 100px;
           background-color: #eeeeee;
           color: var(--darkColor);
           font-size: 14px;
@@ -802,23 +803,55 @@ footer {
       .actions {
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 8px;
         .inputDiv {
           position: relative;
           border: 1px solid var(--mainColor20);
-          padding: 8px;
-          border-radius: 4px;
+          padding: 8px 16px;
+          border-radius: 100px;
           flex: 1;
           display: flex;
           align-items: center;
+          gap: 4px;
           input {
             width: 100%;
             border: none;
             background: none;
+            height: 24px;
+            min-width: 40px;
           }
           span {
             font-size: 12px;
             font-weight: bold;
+            color: var(--mainColor);
+          }
+        }
+        .quantity {
+          position: relative;
+          border: 1px solid var(--mainColor20);
+          padding: 0px 8px;
+          border-radius: 100px;
+          flex: 1;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          input {
+            min-width: 20px;
+            width: 100%;
+            border: none;
+            background: none;
+            text-align: center;
+            height: 24px;
+          }
+          button {
+            height: 40px;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: none;
+            font-size: 24px !important;
             color: var(--mainColor);
           }
         }
@@ -859,7 +892,7 @@ footer {
           transform: scale(1.1);
         }
       }
-      .shareProject{
+      .shareProject {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
@@ -884,5 +917,80 @@ footer {
     100% {
       transform: rotate(360deg);
     }
+  }
+}
+.categories {
+  background-color: var(--mainColor10);
+  background-image: url(../img/BG.svg);
+  background-size: 20px;
+  padding: 40px 0;
+  margin-top: 40px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  .categorySlider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .category {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    border-radius: 16px;
+    transition: var(--transition);
+    padding: 16px;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 110%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background-color: var(--mainColor);
+      border-radius: 12px;
+      transform: translateY(100%);
+      transition: var(--transition);
+    }
+    img {
+      width: 100%;
+      aspect-ratio: 1;
+      max-height: 100px;
+      object-fit: contain;
+      transition: var(--transition);
+
+    }
+    span {
+      font-weight: bold;
+    }
+    &:hover {
+      color: var(--whiteColor);
+      img {
+        filter: brightness(0) invert(1);
+      }
+      &::after {
+        transform: translateY(0);
+      }
+      
+    }
+  }
+  .swiper-wrapper {
+    justify-content: center;
+  }
+  .swiperControl {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
