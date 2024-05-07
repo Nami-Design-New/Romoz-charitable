@@ -942,7 +942,7 @@ footer {
     flex-direction: column;
     gap: 8px;
     text-align: center;
-    border-radius: 16px;
+    border-radius: 8px;
     transition: var(--transition);
     padding: 16px;
     position: relative;
@@ -965,7 +965,7 @@ footer {
     img {
       width: 100%;
       aspect-ratio: 1;
-      max-height: 100px;
+      max-height: 60px;
       object-fit: contain;
       transition: var(--transition);
 
@@ -986,6 +986,9 @@ footer {
   }
   .swiper-wrapper {
     justify-content: center;
+    @media (max-width: 768px) {
+      justify-content: start;
+    }
   }
   .swiperControl {
     justify-content: center;
