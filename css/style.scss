@@ -330,7 +330,6 @@ header {
           white-space: nowrap;
           padding: 8px 16px;
           color: var(--darkColor);
-          font-size: 14px;
           &.active {
             background-color: var(--mainColor);
             color: var(--whiteColor);
@@ -647,7 +646,6 @@ footer {
   font-weight: bold;
   text-transform: capitalize;
   padding: 8px 0 12px;
-  padding-left: 16px;
   position: relative;
   width: fit-content;
   display: flex;
@@ -673,6 +671,9 @@ footer {
 }
 .projects {
   padding: 80px 0;
+  @media (max-width: 576px) {
+    padding: 40px 0;
+  }
   .container {
     display: flex;
     flex-direction: column;
@@ -786,7 +787,6 @@ footer {
           border-radius: 100px;
           background-color: #eeeeee;
           color: var(--darkColor);
-          font-size: 14px;
           transition: var(--transition);
           span {
             font-weight: bold;
@@ -925,6 +925,10 @@ footer {
   background-size: 20px;
   padding: 40px 0;
   margin-top: 40px;
+  @media (max-width: 576px) {
+    margin-top: 8px;
+    padding: 24px 0;
+  }
   .container {
     display: flex;
     flex-direction: column;
@@ -968,7 +972,6 @@ footer {
       max-height: 60px;
       object-fit: contain;
       transition: var(--transition);
-
     }
     span {
       font-weight: bold;
@@ -981,7 +984,6 @@ footer {
       &::after {
         transform: translateY(0);
       }
-      
     }
   }
   .swiper-wrapper {
@@ -996,4 +998,63 @@ footer {
     flex-direction: column;
     align-items: center;
   }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 25px;
+  }
+  h2 {
+    font-size: 21px;
+  }
+  h3 {
+    font-size: 19px;
+  }
+  h4 {
+    font-size: 17px;
+  }
+  h5 {
+    font-size: 15px;
+  }
+  h6 {
+    font-size: 13px;
+  }
+  body,
+  span,
+  p,
+  button,
+  a,
+  P {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h1{
+    font-size: 30px;
+  }
+  h2{
+    font-size: 24px;
+  }
+  h3{
+    font-size: 20px;
+  }
+  h4{
+    font-size: 18px;
+  }
+  h5{
+    font-size: 16px;
+  }
+  h6{
+    font-size: 14px;
+  }
+  body,
+  span,
+  p,
+  button,
+  a,
+  P {
+    font-size: 14px;  
+  }
+
 }

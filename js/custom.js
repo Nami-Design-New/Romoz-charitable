@@ -181,15 +181,18 @@ $(document).ready(function () {
   //spinner
   $(".preloader").delay(1000).fadeOut(300);
   //aos Delay
-  $("section").each(function () {
-    const sectionDivs = $(this).find("[data-aos]");
-    sectionDivs.each(function (index) {
-      // Check if data-aos-delay is not already set
-      if (!$(this).attr("data-aos-delay")) {
-        $(this).attr("data-aos-delay", (index + 1) * 100);
-      }
+  if ($(window).width() > 768) {
+    $("section").each(function () {
+      const sectionDivs = $(this).find("[data-aos]");
+      sectionDivs.each(function (index) {
+        // Check if data-aos-delay is not already set
+        if (!$(this).attr("data-aos-delay")) {
+          $(this).attr("data-aos-delay", (index + 1) * 100);
+        }
+      });
     });
-  });
+  }
+
   // aos
   AOS.init({
     offset: 20,
