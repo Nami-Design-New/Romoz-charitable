@@ -245,10 +245,16 @@ $(document).ready(function () {
   const elements = document.querySelectorAll(".counterUp");
   elements.forEach((el) => IO.observe(el));
 });
-// filepond
-$(".filepond-multiple").filepond({
-  allowMultiple: true,
-});
+
+function highlight(el) {
+  el.previousElementSibling.classList.add("h");
+}
+function dehighlight(el) {
+  if (el.value === "") {
+    el.previousElementSibling.classList.remove("h");
+  }
+}
+
 ////////////////////////////// ///////////////////////
 // Text Animation
 ////////////////////////////// ///////////////////////
