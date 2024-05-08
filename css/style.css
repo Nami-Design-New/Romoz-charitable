@@ -1663,14 +1663,32 @@ footer .border-top {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+  margin-bottom: 24px;
 }
 .statistics .statistic {
   background-color: var(--whiteColor);
   border-radius: 12px;
   padding: 16px;
   display: flex;
-  flex-direction: column;
   gap: 16px;
+  flex: 1;
+  align-items: center;
+}
+.statistics .statistic .icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.statistics .statistic .icon img {
+  width: 64px;
+  height: 64px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.statistics .statistic .info {
   flex: 1;
 }
 .statistics .statistic .info .title {
@@ -1678,6 +1696,22 @@ footer .border-top {
 }
 .statistics .statistic .info .value {
   font-weight: bold;
+  font-size: 40px;
+}
+.statistics .statistic:nth-child(1) {
+  background-color: #e8f2fd;
+}
+.statistics .statistic:nth-child(2) {
+  background-color: #fff3cd;
+}
+.statistics .statistic:nth-child(3) {
+  background-color: #d4edda;
+}
+.statistics .statistic:nth-child(4) {
+  background-color: #f8d7da;
+}
+.statistics .statistic:nth-child(5) {
+  background-color: #fff3cd;
 }
 
 .profile {
