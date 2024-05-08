@@ -107,32 +107,13 @@
       <div class="container">
         <div class="links">
           <a href="index.html"> الرئيسية </a>
-          <a href="#!" class="active"> تسجيل الدخول </a>
+          <a href="#!" class="active"> حسابي </a>
         </div>
-        <h2> تسجيل الدخول </h2>
+        <h2> حسابي </h2>
       </div>
     </section>
-    <!-- account Form -->
-    <section class="accountForm">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-lg-6 col-xl-5 m-auto p-2">
-            <form action="otp.html" class="cardForm">
-              <img class="loginImg" src="img/login.svg" alt="">
-
-              <div class="formGroup">
-                <label for="phoneNum"> <img src="img/icons/phone.svg" alt=""> رقم الهاتف </label>
-                <div class="inputDiv ltr">
-                  <input type="number" class="form-control" id="phoneNum" placeholder="050 00 00 00">
-                  <span> +966 </span>
-                </div>
-              </div>
-              <button type="submit" class="customBtn  mt-4"> دخول </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
+    
+    
   </content>
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
   <!--((((((((((((((((( / content )))))))))))))))))))-->
@@ -218,6 +199,18 @@
   <!-- main -->
   <script src="js/main.js"></script>
   <script src="js/custom.js"></script>
+  <script>
+    document.getElementById("profileImageInput").addEventListener("change", function (event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          document.getElementById("profileImagePreview").setAttribute("src", e.target.result);
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
 </body>
 
 </html>

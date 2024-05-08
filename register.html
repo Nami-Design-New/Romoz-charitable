@@ -107,9 +107,9 @@
       <div class="container">
         <div class="links">
           <a href="index.html"> الرئيسية </a>
-          <a href="#!" class="active"> تسجيل الدخول </a>
+          <a href="#!" class="active"> انشاء حساب </a>
         </div>
-        <h2> تسجيل الدخول </h2>
+        <h2> انشاء حساب </h2>
       </div>
     </section>
     <!-- account Form -->
@@ -117,17 +117,23 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-lg-6 col-xl-5 m-auto p-2">
-            <form action="otp.html" class="cardForm">
-              <img class="loginImg" src="img/login.svg" alt="">
+            <form action="account.html" class="cardForm">
 
-              <div class="formGroup">
-                <label for="phoneNum"> <img src="img/icons/phone.svg" alt=""> رقم الهاتف </label>
-                <div class="inputDiv ltr">
-                  <input type="number" class="form-control" id="phoneNum" placeholder="050 00 00 00">
-                  <span> +966 </span>
-                </div>
+              <div class="profileImage">
+                <input type="file" id="profileImageInput" accept="image/*" />
+                <label for="profileImageInput" class="profileImageLabel">
+                  <img src="img/placeholder.svg" alt="Profile Image" id="profileImagePreview" />
+                </label>
+                <span> <img src="img/icons/plus.svg" alt=""></span>
               </div>
-              <button type="submit" class="customBtn  mt-4"> دخول </button>
+              <div class="formGroup">
+                <input type="text" class="form-control" name="" id="name" placeholder="اكتب الاسم">
+              </div>
+              <div class="d-flex gap-3 justify-content-between mt-4">
+                <button type="button" class="btn"> تخطي </button>    
+                <button type="submit" class="customBtn m-0"> تأكيد </button>   
+              </div>
+               
             </form>
           </div>
         </div>
@@ -218,6 +224,18 @@
   <!-- main -->
   <script src="js/main.js"></script>
   <script src="js/custom.js"></script>
+  <script>
+    document.getElementById("profileImageInput").addEventListener("change", function (event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          document.getElementById("profileImagePreview").setAttribute("src", e.target.result);
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
 </body>
 
 </html>

@@ -107,9 +107,10 @@
       <div class="container">
         <div class="links">
           <a href="index.html"> الرئيسية </a>
-          <a href="#!" class="active"> تسجيل الدخول </a>
+          <a href="login.html"> تسجيل الدخول </a>
+          <a href="#!" class="active"> رمز التحقق </a>
         </div>
-        <h2> تسجيل الدخول </h2>
+        <h2> رمز التحقق </h2>
       </div>
     </section>
     <!-- account Form -->
@@ -117,17 +118,21 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-lg-6 col-xl-5 m-auto p-2">
-            <form action="otp.html" class="cardForm">
-              <img class="loginImg" src="img/login.svg" alt="">
-
-              <div class="formGroup">
-                <label for="phoneNum"> <img src="img/icons/phone.svg" alt=""> رقم الهاتف </label>
-                <div class="inputDiv ltr">
-                  <input type="number" class="form-control" id="phoneNum" placeholder="050 00 00 00">
-                  <span> +966 </span>
-                </div>
+            <form action="register.html" class="cardForm">
+              <img class="loginImg" src="img/otp.svg" alt="">
+              <label class="formLabel"> من فضلك ادخل رمز التحقق المرسل الي
+                <span> 0123456789 </span>
+              </label>
+              <div class="otp">
+                <input class="otp-input" type="text" maxlength=1>
+                <input class="otp-input" type="text" maxlength=1>
+                <input class="otp-input" type="text" maxlength=1>
+                <input class="otp-input" type="text" maxlength=1>
+                <input class="otp-input" type="text" maxlength=1>
+                <!-- Store OTP Value -->
+                <input class="otp-value" type="hidden" name="opt-value">
               </div>
-              <button type="submit" class="customBtn  mt-4"> دخول </button>
+              <button type="submit" class="customBtn  mt-4"> تأكيد </button>
             </form>
           </div>
         </div>
@@ -218,6 +223,44 @@
   <!-- main -->
   <script src="js/main.js"></script>
   <script src="js/custom.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".otp :input[type!='hidden']:first").focus();
+      // Selecting DOM elements
+      let otpFields = $(".otp .otp-input");
+      let otpValueField = $(".otp .otp-value");
+      function updateOTPValue() {
+        let otpValue = "";
+        otpFields.each(function () {
+          let fieldValue = $(this).val();
+          if (fieldValue !== "") {
+            otpValue += fieldValue;
+          }
+        });
+        otpValueField.val(otpValue);
+      }
+      otpFields.on("input", function () {
+        $(this).val($(this).val().replace(/[^0-9]/g, ""));
+        updateOTPValue();
+      });
+      otpFields.on("keyup", function (e) {
+        let key = e.keyCode || e.charCode;
+        if (key === 8 || key === 46 || key === 37 || key === 40) {
+          $(this).prev().focus();
+        } else if (key === 38 || key === 39 || $(this).val() !== "") {
+          $(this).next().focus();
+        }
+      });
+      otpFields.on("paste", function (e) {
+        let pasteData = (e.originalEvent || e).clipboardData.getData("text");
+        let pasteDataSplitted = pasteData.split("");
+        $.each(pasteDataSplitted, function (index, value) {
+          otpFields.eq(index).val(value);
+        });
+        updateOTPValue();
+      });
+    });
+  </script>
 </body>
 
 </html>

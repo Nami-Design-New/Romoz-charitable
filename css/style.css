@@ -1161,6 +1161,9 @@ footer .border-top {
   background: linear-gradient(rgba(255, 255, 255, 0.2196078431), #ffffff);
   z-index: -1;
 }
+.banner .links {
+  margin-bottom: 4px;
+}
 .banner .links a {
   padding: 4px;
   position: relative;
@@ -1183,6 +1186,7 @@ footer .border-top {
 }
 .banner h2 {
   font-weight: bold;
+  padding: 4px;
   color: var(--mainColor);
   text-transform: capitalize;
 }
@@ -1514,10 +1518,10 @@ footer .border-top {
   flex-direction: column;
 }
 
-.account {
+.accountForm {
   margin-bottom: 40px;
 }
-.account .cardForm {
+.accountForm .cardForm {
   isolation: isolate;
   padding: 30px;
   border-radius: 14px;
@@ -1528,11 +1532,11 @@ footer .border-top {
   gap: 16px;
 }
 @media (max-width: 768px) {
-  .account .cardForm {
+  .accountForm .cardForm {
     padding: 30px 10px;
   }
 }
-.account .cardForm .loginImg {
+.accountForm .cardForm .loginImg {
   width: 100%;
   max-height: 200px;
   aspect-ratio: 1;
@@ -1540,26 +1544,26 @@ footer .border-top {
      object-fit: contain;
 }
 @media (max-width: 768px) {
-  .account .cardForm .loginImg {
+  .accountForm .cardForm .loginImg {
     padding: 0 30px;
   }
 }
-.account .cardForm .formGroup {
+.accountForm .cardForm .formGroup {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.account .cardForm .formGroup label {
+.accountForm .cardForm .formGroup label {
   font-weight: bold;
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.account .cardForm .formGroup label img {
+.accountForm .cardForm .formGroup label img {
   width: 20px;
   height: 20px;
 }
-.account .cardForm .formGroup .inputDiv {
+.accountForm .cardForm .formGroup .inputDiv {
   position: relative;
   border: 1px solid var(--lightGrayColor);
   padding: 0px 16px;
@@ -1569,38 +1573,87 @@ footer .border-top {
   align-items: center;
   gap: 4px;
 }
-.account .cardForm .formGroup .inputDiv input {
+.accountForm .cardForm .formGroup .inputDiv input {
   width: 100%;
   border: none;
   background: none;
   height: 24px;
   min-width: 40px;
 }
-.account .cardForm .formGroup .inputDiv span {
+.accountForm .cardForm .formGroup .inputDiv span {
   font-weight: bold;
   color: var(--mainColor);
 }
-.account .cardForm .formGroup .inputDiv.ltr * {
+.accountForm .cardForm .formGroup .inputDiv.ltr * {
   text-align: start;
   direction: ltr;
+}
+.accountForm .cardForm .formLabel {
+  text-align: center;
+}
+.accountForm .cardForm .formLabel span {
+  color: var(--mainColor);
+  font-weight: bold;
 }
 
 .otp {
   direction: ltr;
-  padding: 20px 0px;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 4px;
 }
 .otp .otp-input {
   min-width: 40px;
-  width: 100%;
-  height: 60px;
+  flex: 1;
+  height: 64px;
   background-color: #eee;
   border: none;
   border-bottom: 2px solid var(--secondColor);
   text-align: center;
   font-size: 18px;
-  border-radius: 4px 4px 0 0;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.profileImage {
+  position: relative;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profileImage .profileImageLabel {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.profileImage .profileImageLabel img {
+  display: block;
+  width: 150px;
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+  background-color: #f1f1f1;
+  border: 1px solid #f1f1f1;
+}
+.profileImage span {
+  position: absolute;
+  bottom: 4px;
+  right: 12px;
+  background-color: var(--whiteColor);
+  border-radius: 100%;
+}
+.profileImage span img {
+  width: 32px;
+  height: 32px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.profileImage #profileImageInput {
+  display: none;
 }
 
 @media screen and (max-width: 768px) {
