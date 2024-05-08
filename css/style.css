@@ -1142,14 +1142,14 @@ footer .border-top {
   background-size: cover;
   background-attachment: fixed;
   background-position: bottom;
-  padding: 150px 0 50px;
+  padding: 100px 0 50px;
   position: relative;
   display: flex;
   isolation: isolate;
 }
 @media (max-width: 768px) {
   .banner {
-    padding: 200px 0 30px;
+    padding: 60px 0 50px;
   }
 }
 .banner::before {
@@ -1187,63 +1187,12 @@ footer .border-top {
   color: var(--mainColor);
   text-transform: capitalize;
 }
-
-@media screen and (max-width: 768px) {
-  h1 {
-    font-size: 26px;
-  }
-  h2 {
-    font-size: 22px;
-  }
-  h3 {
+@media (max-width: 768px) {
+  .banner h2 {
     font-size: 20px;
   }
-  h4 {
-    font-size: 18px;
-  }
-  h5 {
-    font-size: 16px;
-  }
-  h6 {
-    font-size: 14px;
-  }
-  body,
-  span,
-  p,
-  button,
-  a,
-  P {
-    font-size: 14px;
-  }
 }
-@media screen and (min-width: 768px) {
-  h1 {
-    font-size: 32px;
-  }
-  h2 {
-    font-size: 25px;
-  }
-  h3 {
-    font-size: 21px;
-  }
-  h4 {
-    font-size: 19px;
-  }
-  h5 {
-    font-size: 17px;
-  }
-  h6 {
-    font-size: 15px;
-  }
-  body,
-  span,
-  p,
-  button,
-  a,
-  P {
-    font-size: 15px;
-  }
-}
+
 .bankAccounts {
   margin-bottom: 40px;
 }
@@ -1565,4 +1514,61 @@ footer .border-top {
 .map {
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 26px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  h5 {
+    font-size: 16px;
+  }
+  h6 {
+    font-size: 14px;
+  }
+  body,
+  span,
+  p,
+  button,
+  a,
+  P {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  h3 {
+    font-size: 21px;
+  }
+  h4 {
+    font-size: 19px;
+  }
+  h5 {
+    font-size: 17px;
+  }
+  h6 {
+    font-size: 15px;
+  }
+  body,
+  span,
+  p,
+  button,
+  a,
+  P {
+    font-size: 15px;
+  }
 }/*# sourceMappingURL=style.css.map */
