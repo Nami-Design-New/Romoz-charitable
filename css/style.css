@@ -1807,6 +1807,14 @@ footer .border-top {
   min-width: 100px;
   padding: 12px;
 }
+.profile .profileContent .table-responsive .table .image {
+  width: 100%;
+  max-width: 100px;
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
 .profile .cardForm {
   box-shadow: unset;
   background-color: #f8f8f8;

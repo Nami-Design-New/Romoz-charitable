@@ -1746,6 +1746,14 @@ footer {
           min-width: 100px;
           padding: 12px;
         }
+        .image{
+          width: 100%;
+          max-width: 100px;
+          aspect-ratio: 1;
+          object-fit: cover;
+          border-radius: 8px;
+
+        }
       }
     }
   }
