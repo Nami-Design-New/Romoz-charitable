@@ -48,16 +48,33 @@
           <a class="navLink" id="history-nav" href="categories.html"> اقسام التبرعات </a>
           <a class="navLink" id="team-nav" href="bankAccounts.html"> الحسابات البنكية </a>
           <a class="navLink" id="contactUs-nav" href="index.html#contactUs"> اتصل بنا </a>
-          <a class="navLink" id="partners-nav" href="index.html#partners"> حسابي </a>
         </ul>
       </nav>
       <!-- Actions -->
       <div class="moreActions">
-        <a href="#!" data-bs-toggle="tooltip" title=" سلة التبرعات "> <img src="img/icons/cart.svg" alt=""> <span
-            class="count">3</span>
+        <a href="#!" class="link" data-bs-toggle="tooltip" title=" سلة التبرعات "> <img src="img/icons/cart.svg" alt="">
+          <span class="count">3</span>
         </a>
-        <a href="#!" data-bs-toggle="tooltip" title=" تبرع سريع "> <img src="img/icons/donate.svg" alt=""> </a>
-        <a href="#!" data-bs-toggle="tooltip" title=" اللغة "> EN </a>
+        <a href="#!" class="link" data-bs-toggle="modal" data-bs-target="#donateQuickly">
+          <span data-bs-toggle="tooltip" title=" تبرع سريع ">
+            <img src="img/icons/donate.svg" alt="">
+          </span>
+        </a>
+        <a href="#!" class="link" data-bs-toggle="tooltip" title=" اللغة "> EN </a>
+        <div class="dropdown">
+          <button class=" dropdown-toggle link" type="button" id="myAccount" data-bs-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <img src="img/icons/user.svg" alt="">
+          </button>
+          <div class="dropdown-menu" aria-labelledby="myAccount">
+            <button class="dropdown-item" href="#"> حسابي </button>
+            <button class="dropdown-item" href="#"> انشاء حساب </button>
+            <button class="dropdown-item" href="#"> تسجيل دخول </button>
+            <button class="dropdown-item" href="#"> تعديل الحساب </button>
+            <button class="dropdown-item" href="#"> الاشعارات </button>
+            <button class="dropdown-item" href="#"> تسجيل خروج </button>
+          </div>
+        </div>
       </div>
     </section>
   </header>

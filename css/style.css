@@ -328,7 +328,7 @@ header .inner .navbar-brand {
 }
 header .inner .navbar-brand img {
   height: 50px;
-  min-width: 120px;
+  min-width: 100px;
   max-width: 250px;
   width: 100%;
   -o-object-fit: contain;
@@ -423,7 +423,7 @@ header .inner .moreActions {
     flex: unset;
   }
 }
-header .inner .moreActions a {
+header .inner .moreActions .link {
   color: var(--darkColor);
   display: flex;
   align-items: center;
@@ -438,20 +438,20 @@ header .inner .moreActions a {
   font-weight: bold;
   position: relative;
 }
-header .inner .moreActions a img {
+header .inner .moreActions .link img {
   min-width: 16px;
   height: 16px;
   transition: var(--transition);
   filter: brightness(0) opacity(0.6);
 }
-header .inner .moreActions a:hover {
+header .inner .moreActions .link:hover {
   background-color: var(--mainColor);
   color: var(--whiteColor);
 }
-header .inner .moreActions a:hover img {
+header .inner .moreActions .link:hover img {
   filter: brightness(0) opacity(1) invert(1);
 }
-header .inner .moreActions a .count {
+header .inner .moreActions .link .count {
   background-color: var(--mainColor);
   color: var(--whiteColor);
   padding: 0px 6px;
@@ -464,6 +464,38 @@ header .inner .moreActions a .count {
   position: absolute;
   top: -4px;
   right: -4px;
+}
+header .inner .moreActions .dropdown .dropdown-menu {
+  border: none;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1019607843);
+  animation: fadeIn 0.5s;
+  transform: unset !important;
+  inset: unset !important;
+  left: 0 !important;
+  top: calc(100% + 0px) !important;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+header .inner .moreActions .dropdown .dropdown-item {
+  color: var(--darkColor);
+  padding: 8px 16px;
+  font-size: 14px;
+}
+header .inner .moreActions .dropdown .dropdown-item:hover {
+  background-color: var(--mainColor10);
+  color: var(--mainColor);
+}
+header .inner .moreActions .dropdown .dropdown-toggle::after {
+  display: none;
+}
+header .inner .moreActions .dropdown:hover .dropdown-menu {
+  display: block;
 }
 header.headerAnimate {
   box-shadow: 0px 20px 100px rgba(0, 0, 0, 0.1019607843);
