@@ -1786,6 +1786,27 @@ footer .border-top {
   display: flex;
   font-size: 13px;
 }
+.profile .profileContent .table-responsive {
+  border: 1px solid #e9e9e9;
+  border-radius: 8px;
+}
+.profile .profileContent .table-responsive .table {
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 0;
+}
+.profile .profileContent .table-responsive .table thead {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+}
+.profile .profileContent .table-responsive .table th {
+  padding: 12px;
+  white-space: nowrap;
+}
+.profile .profileContent .table-responsive .table td {
+  min-width: 100px;
+  padding: 12px;
+}
 .profile .cardForm {
   box-shadow: unset;
   background-color: #f8f8f8;
