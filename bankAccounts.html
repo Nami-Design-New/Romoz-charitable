@@ -52,11 +52,40 @@
         <a href="#!" data-bs-toggle="tooltip" title=" سلة التبرعات "> <img src="img/icons/cart.svg" alt=""> <span
             class="count">3</span>
         </a>
-        <a href="#!" data-bs-toggle="tooltip" title=" تبرع سريع "> <img src="img/icons/donate.svg" alt=""> </a>
+        <a href="#!" data-bs-toggle="modal" data-bs-target="#donateQuickly">
+          <span data-bs-toggle="tooltip" title=" تبرع سريع ">
+            <img src="img/icons/donate.svg" alt="">
+          </span>
+        </a>
         <a href="#!" data-bs-toggle="tooltip" title=" اللغة "> EN </a>
       </div>
     </section>
   </header>
+  <!-- Modal -->
+  <div class="modal fade donateQuickly" id="donateQuickly" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modalHeader">
+          <h4 class="modalTitle"> تبرع سريع </h4>
+          <button class="btn" data-bs-dismiss="modal"> X </button>
+        </div>
+        <form class="modalForm">
+          <div class="formGroup">
+            <label for="type"> نوع التبرع </label>
+            <select id="type" name="" class="form-select" id="">
+              <option value=""> مشاريع عامة </option>
+              <option value=""> الوقف بمكة </option>
+            </select>
+          </div>
+          <div class="formGroup">
+            <label for="ammount"> مبلغ التبرع </label>
+            <input id="ammount" type="number" min="0" class="form-control" placeholder=" 0 ريال ">
+          </div>
+          <button type="submit" class="btn btnSubmit"> تبرع </button>
+        </form>
+      </div>
+    </div>
+  </div>
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
   <!--((((((((((((((((((( content )))))))))))))))))))-->
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
