@@ -1086,6 +1086,9 @@ footer .border-top {
   align-items: center;
 }
 
+.allCategories {
+  margin-bottom: 40px;
+}
 .allCategories .category {
   background-color: var(--mainColor10);
   display: flex;
@@ -1342,7 +1345,7 @@ footer .border-top {
 }
 
 .contact_section {
-  padding: 60px 12px;
+  margin-bottom: 40px;
 }
 .contact_section form {
   background: #fff;

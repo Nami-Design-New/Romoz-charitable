@@ -1052,6 +1052,7 @@ footer {
   }
 }
 .allCategories {
+  margin-bottom: 40px;
   .category {
     background-color: var(--mainColor10);
     display: flex;
@@ -1307,7 +1308,7 @@ footer {
   }
 }
 .contact_section {
-  padding: 60px 12px;
+  margin-bottom: 40px;
   form {
     background: #fff;
     box-shadow: 0px 4px 24px #0000001a;
@@ -1404,7 +1405,7 @@ footer {
       position: relative;
       overflow: hidden;
       transition: var(--transition);
-      
+
       &::after {
         position: absolute;
         content: "";
