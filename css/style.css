@@ -1668,27 +1668,28 @@ footer .border-top {
 .statistics .statistic {
   background-color: var(--whiteColor);
   border-radius: 12px;
-  padding: 16px;
   display: flex;
   gap: 16px;
   flex: 1;
   align-items: center;
+  padding: 8px;
 }
 .statistics .statistic .icon {
-  width: 80px;
-  height: 80px;
   border-radius: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  padding: 8px;
 }
 .statistics .statistic .icon img {
-  width: 64px;
-  height: 64px;
+  width: 100px;
+  aspect-ratio: 1;
   -o-object-fit: contain;
      object-fit: contain;
 }
 .statistics .statistic .info {
+  padding: 8px 16px;
   flex: 1;
 }
 .statistics .statistic .info .title {
