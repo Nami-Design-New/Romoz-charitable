@@ -1819,7 +1819,16 @@ footer {
   }
   
 }
-
+.cart{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  .cartItem{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 26px;
