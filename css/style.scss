@@ -1600,11 +1600,10 @@ footer {
 }
 
 .profile {
-  padding: 50px 0;
+  padding: 40px 0;
   .userHeader {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
     background-color: var(--whiteColor);
-    color: var(--mainColor);
     border-radius: 20px;
     box-shadow: var(--BigShadow);
     padding: 20px;
@@ -1613,73 +1612,29 @@ footer {
     }
     .userInfo {
       position: relative;
-      margin: 0px 10px;
-      img {
-        width: 100px;
-        height: 100px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      .userImg {
+        width: 80px;
+        height: 80px;
         object-fit: cover;
-        object-position: top;
         border-radius: 100%;
-        border: 3px solid var(--mainColor);
+        border: 1px solid var(--mainColor);
       }
       .userName {
-        h3 {
+        flex: 1;
+        .name {
           font-weight: bold;
-          margin-bottom: 10px;
-          color: var(--blackColor);
+        }
+        .phone {
+          color: var(--grayColor);
         }
       }
       .control {
-        position: absolute;
-        right: 0;
-        top: 5px;
-        i {
-          font-size: 28px;
-          color: #ff0000;
-          cursor: pointer;
-        }
-        .switch {
-          position: relative;
-          width: 50px;
-          height: 28px;
-          margin: -3px 10px;
-          input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-          }
-          .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            background-color: #ccc;
-            transition: 0.4s;
-            border-radius: 34px;
-            margin: 0px !important;
-            &:before {
-              position: absolute;
-              content: "";
-              height: 20px;
-              width: 20px;
-              right: 4px;
-              bottom: 4px;
-              background-color: white;
-              transition: 0.4s;
-              border-radius: 50%;
-            }
-          }
-          input:checked + .slider {
-            background-color: #2196f3;
-          }
-          input:focus + .slider {
-            box-shadow: 0 0 1px #2196f3;
-          }
-          input:checked + .slider:before {
-            transform: translateX(22px);
-          }
+        img {
+          width: 32px;
+          height: 32px;
         }
       }
     }
@@ -1713,12 +1668,11 @@ footer {
     flex-direction: column;
     gap: 8px;
     a {
-      padding: 16px;
+      padding: 12px 16px;
       display: flex;
       align-items: center;
-      color: var(--mainColor);
       transition: var(--transition);
-      border-radius: 8px;
+      border-radius: 12px;
       border: 1px solid #eee;
       i {
         margin-right: 5px;
@@ -1770,24 +1724,22 @@ footer {
         list-style: none;
         .notification {
           padding: 20px;
-          background-color: #2b4d9e05;
-          border: 1px solid var(--mainColor10);
+          background-color: #f8f8f8;
+          border: 1px solid #e9e9e9;
           border-radius: 10px;
           margin-bottom: 12px;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
           .notificationTitle {
             font-weight: bold;
-            margin-bottom: 10px;
           }
           p {
-            color: #808080;
-            margin-bottom: 10px;
+            color: var(--grayColor);
           }
           .date {
             display: flex;
-            font-size: small;
-            i {
-              color: var(--mainColor);
-            }
+            font-size: 13px;
           }
         }
       }
