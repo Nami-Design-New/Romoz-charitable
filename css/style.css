@@ -1498,7 +1498,7 @@ footer .border-top {
   content: "";
   height: 1000px;
   width: 0;
-  left: 10px;
+  left: 50%;
   transition: var(--transition);
   background: var(--mainColor);
   transform: rotate(-25deg);
@@ -1609,7 +1609,6 @@ footer .border-top {
   height: 64px;
   background-color: #eee;
   border: none;
-  border-bottom: 2px solid var(--secondColor);
   text-align: center;
   font-size: 18px;
   font-weight: bold;
@@ -1654,6 +1653,272 @@ footer .border-top {
 }
 .profileImage #profileImageInput {
   display: none;
+}
+
+.profile {
+  padding: 50px 0;
+}
+.profile .userHeader {
+  margin-bottom: 30px;
+  background-color: var(--whiteColor);
+  color: var(--mainColor);
+  border-radius: 20px;
+  box-shadow: var(--BigShadow);
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  .profile .userHeader {
+    padding: 10px;
+  }
+}
+.profile .userHeader .userInfo {
+  position: relative;
+  margin: 0px 10px;
+}
+.profile .userHeader .userInfo img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 100%;
+  border: 3px solid var(--mainColor);
+}
+.profile .userHeader .userInfo .userName h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--blackColor);
+}
+.profile .userHeader .userInfo .control {
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+.profile .userHeader .userInfo .control i {
+  font-size: 28px;
+  color: #ff0000;
+  cursor: pointer;
+}
+.profile .userHeader .userInfo .control .switch {
+  position: relative;
+  width: 50px;
+  height: 28px;
+  margin: -3px 10px;
+}
+.profile .userHeader .userInfo .control .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.profile .userHeader .userInfo .control .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+  margin: 0px !important;
+}
+.profile .userHeader .userInfo .control .switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  right: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+.profile .userHeader .userInfo .control .switch input:checked + .slider {
+  background-color: #2196f3;
+}
+.profile .userHeader .userInfo .control .switch input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+.profile .userHeader .userInfo .control .switch input:checked + .slider:before {
+  transform: translateX(22px);
+}
+@media (max-width: 760px) {
+  .profile .userHeader .container {
+    padding: 0px !important;
+  }
+  .profile .userHeader .userInfo {
+    padding: 20px 10px;
+  }
+  .profile .userHeader .userInfo img {
+    width: 80px;
+    height: 80px;
+  }
+  .profile .userHeader .userInfo span {
+    margin: 0px 10px;
+  }
+}
+.profile .profileNavCol {
+  background-color: var(--whiteColor);
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid #ccc;
+  margin-bottom: 50px;
+  position: sticky;
+  top: 90px;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.profile .profileNavCol a {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  color: var(--mainColor);
+  transition: var(--transition);
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+.profile .profileNavCol a i {
+  margin-right: 5px;
+}
+.profile .profileNavCol a.active, .profile .profileNavCol a:hover {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+}
+@media (max-width: 760px) {
+  .profile .profileNavCol {
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .profile .profileNavCol a {
+    padding: 12px 10px;
+    display: inline-flex;
+    margin: 3px 0px;
+    border-bottom: 1px solid var(--mainColor);
+    flex: 1 140px;
+  }
+}
+.profile .profileContent .editProfile {
+  padding: 20px;
+  background-color: var(--whiteColor);
+  margin-bottom: 20px;
+  border-radius: 10px;
+  isolation: isolate;
+  box-shadow: var(--BigShadow);
+}
+.profile .profileContent .editProfile .head {
+  background-color: var(--mainColor10);
+  color: var(--mainColor);
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.profile .profileContent .editProfile .head h5 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.profile .profileContent .notifications {
+  padding: 10px;
+}
+.profile .profileContent .notifications ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.profile .profileContent .notifications ul .notification {
+  padding: 20px;
+  background-color: rgba(43, 77, 158, 0.0196078431);
+  border: 1px solid var(--mainColor10);
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+.profile .profileContent .notifications ul .notification .notificationTitle {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.profile .profileContent .notifications ul .notification p {
+  color: #808080;
+  margin-bottom: 10px;
+}
+.profile .profileContent .notifications ul .notification .date {
+  display: flex;
+  font-size: small;
+}
+.profile .profileContent .notifications ul .notification .date i {
+  color: var(--mainColor);
+}
+.profile .profileContent .purchases {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.profile .profileContent .purchases .checkout {
+  background-color: var(--mainColor10);
+  border: 1px solid var(--mainColor30);
+  border-radius: 16px;
+  padding: 16px 8px;
+}
+@media (max-width: 768px) {
+  .profile .profileContent .purchases .checkout {
+    margin-top: 20px;
+  }
+}
+.profile .profileContent .purchases .bill {
+  background-color: var(--whiteColor);
+  border-radius: 16px;
+  margin-top: 20px;
+  padding: 8px;
+  list-style: none;
+}
+.profile .profileContent .purchases .bill li {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #eee;
+}
+.profile .profileContent .purchases .bill li:last-child {
+  padding-bottom: 0px;
+  border-bottom: none;
+}
+.profile .profileContent .purchases .bill li img {
+  width: 72px;
+  height: 72px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+.profile .profileContent .purchases .bill li .info p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.profile .profileContent .purchases .bill li .info span {
+  color: var(--mainColor);
+  font-weight: bold;
+}
+.profile .profileContent .purchases .sectionTitle {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  padding: 0 24px;
+  flex-wrap: wrap;
+}
+.profile .profileContent .purchases .sectionTitle .title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-transform: capitalize;
+}
+.profile .profileContent .purchases .sectionTitle .title span {
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--mainColor);
 }
 
 @media screen and (max-width: 768px) {
