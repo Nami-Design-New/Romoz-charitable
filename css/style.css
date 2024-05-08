@@ -1521,7 +1521,8 @@ footer .border-top {
 .accountForm {
   margin-bottom: 40px;
 }
-.accountForm .cardForm {
+
+.cardForm {
   isolation: isolate;
   padding: 30px;
   border-radius: 14px;
@@ -1532,11 +1533,11 @@ footer .border-top {
   gap: 16px;
 }
 @media (max-width: 768px) {
-  .accountForm .cardForm {
+  .cardForm {
     padding: 30px 10px;
   }
 }
-.accountForm .cardForm .loginImg {
+.cardForm .loginImg {
   width: 100%;
   max-height: 200px;
   aspect-ratio: 1;
@@ -1544,26 +1545,26 @@ footer .border-top {
      object-fit: contain;
 }
 @media (max-width: 768px) {
-  .accountForm .cardForm .loginImg {
+  .cardForm .loginImg {
     padding: 0 30px;
   }
 }
-.accountForm .cardForm .formGroup {
+.cardForm .formGroup {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.accountForm .cardForm .formGroup label {
+.cardForm .formGroup label {
   font-weight: bold;
   display: flex;
   align-items: center;
   gap: 8px;
 }
-.accountForm .cardForm .formGroup label img {
+.cardForm .formGroup label img {
   width: 20px;
   height: 20px;
 }
-.accountForm .cardForm .formGroup .inputDiv {
+.cardForm .formGroup .inputDiv {
   position: relative;
   border: 1px solid var(--lightGrayColor);
   padding: 0px 16px;
@@ -1573,27 +1574,30 @@ footer .border-top {
   align-items: center;
   gap: 4px;
 }
-.accountForm .cardForm .formGroup .inputDiv input {
+.cardForm .formGroup .inputDiv input {
   width: 100%;
   border: none;
   background: none;
   height: 24px;
   min-width: 40px;
 }
-.accountForm .cardForm .formGroup .inputDiv span {
+.cardForm .formGroup .inputDiv span {
   font-weight: bold;
   color: var(--mainColor);
 }
-.accountForm .cardForm .formGroup .inputDiv.ltr * {
+.cardForm .formGroup .inputDiv.ltr * {
   text-align: start;
   direction: ltr;
 }
-.accountForm .cardForm .formLabel {
+.cardForm .formLabel {
   text-align: center;
 }
-.accountForm .cardForm .formLabel span {
+.cardForm .formLabel span {
   color: var(--mainColor);
   font-weight: bold;
+}
+.cardForm .form-control {
+  border-radius: 12px;
 }
 
 .otp {
@@ -1750,29 +1754,9 @@ footer .border-top {
   .profile .profileNavCol a {
     padding: 12px 10px;
     display: inline-flex;
-    margin: 3px 0px;
-    border-bottom: 1px solid var(--mainColor);
     flex: 1 140px;
+    border-radius: 8px;
   }
-}
-.profile .profileContent .editProfile {
-  padding: 20px;
-  background-color: var(--whiteColor);
-  margin-bottom: 20px;
-  border-radius: 10px;
-  isolation: isolate;
-  box-shadow: var(--BigShadow);
-}
-.profile .profileContent .editProfile .head {
-  background-color: var(--mainColor10);
-  color: var(--mainColor);
-  margin-bottom: 20px;
-  padding: 20px;
-  border-radius: 10px;
-}
-.profile .profileContent .editProfile .head h5 {
-  font-weight: bold;
-  text-transform: uppercase;
 }
 .profile .profileContent .notifications {
   padding: 10px;
@@ -1802,74 +1786,10 @@ footer .border-top {
   display: flex;
   font-size: 13px;
 }
-.profile .profileContent .purchases {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.profile .profileContent .purchases .checkout {
-  background-color: var(--mainColor10);
-  border: 1px solid var(--mainColor30);
-  border-radius: 16px;
-  padding: 16px 8px;
-}
-@media (max-width: 768px) {
-  .profile .profileContent .purchases .checkout {
-    margin-top: 20px;
-  }
-}
-.profile .profileContent .purchases .bill {
-  background-color: var(--whiteColor);
-  border-radius: 16px;
-  margin-top: 20px;
-  padding: 8px;
-  list-style: none;
-}
-.profile .profileContent .purchases .bill li {
-  display: flex;
-  align-items: center;
-  padding-top: 10px;
-  padding-bottom: 20px;
-  border-bottom: 1px dashed #eee;
-}
-.profile .profileContent .purchases .bill li:last-child {
-  padding-bottom: 0px;
-  border-bottom: none;
-}
-.profile .profileContent .purchases .bill li img {
-  width: 72px;
-  height: 72px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  border-radius: 8px;
-  margin-right: 10px;
-}
-.profile .profileContent .purchases .bill li .info p {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-.profile .profileContent .purchases .bill li .info span {
-  color: var(--mainColor);
-  font-weight: bold;
-}
-.profile .profileContent .purchases .sectionTitle {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  align-items: center;
-  padding: 0 24px;
-  flex-wrap: wrap;
-}
-.profile .profileContent .purchases .sectionTitle .title {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  text-transform: capitalize;
-}
-.profile .profileContent .purchases .sectionTitle .title span {
-  font-weight: bold;
-  font-size: 20px;
-  color: var(--mainColor);
+.profile .cardForm {
+  box-shadow: unset;
+  background-color: #f8f8f8;
+  border: 1px solid #e9e9e9;
 }
 
 @media screen and (max-width: 768px) {

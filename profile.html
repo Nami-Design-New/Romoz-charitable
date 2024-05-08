@@ -48,7 +48,7 @@
       </nav>
       <!-- Actions -->
       <div class="moreActions">
-        <a href="#!" class="link" data-bs-toggle="tooltip" title=" سلة التبرعات "> <img src="img/icons/cart.svg" alt="">
+        <a href="cart.html" class="link" data-bs-toggle="tooltip" title=" سلة التبرعات "> <img src="img/icons/cart.svg" alt="">
           <span class="count">3</span>
         </a>
         <a href="#!" class="link" data-bs-toggle="modal" data-bs-target="#donateQuickly">
@@ -63,7 +63,7 @@
           </button>
           <div class="dropdown-menu" aria-labelledby="myAccount">
             <a href="login.html" class="dropdown-item"> تسجيل دخول </a>
-            <a href="account.html" class="dropdown-item"> حسابي </a>
+            <a href="profile.html" class="dropdown-item"> حسابي </a>
             <a href="notifications.html" class="dropdown-item"> الاشعارات </a>
             <a href="editProfile.html" class="dropdown-item"> تعديل الحساب </a>
             <a href="#!" class="dropdown-item"> تسجيل خروج </a>
@@ -112,7 +112,44 @@
         <h2> حسابي </h2>
       </div>
     </section>
-    
+    <!-- profile -->
+    <section class="profile">
+      <div class="container ">
+        <!-- /user Header  -->
+        <div class="row">
+          <!-- links -->
+          <div class="col-md-5 col-lg-4 col-xl-3 p-1">
+            <!-- user Header  -->
+            <div class=" userHeader">
+              <div class="userInfo">
+                <img class="userImg" src="img/placeholder.svg" alt="">
+                <div class="userName">
+                  <h4 class="name"> محمود الكومي </h4>
+                  <span class="phone"> +966 0123456789 </span>
+                </div>
+
+                <div class="control">
+                  <a href="login.html" data-bs-toggle="tooltip" title=" تسجيل خروج "><img src="img/icons/powerOff.svg"
+                      alt=""></a>
+                </div>
+              </div>
+            </div>
+            <div class="profileNavCol">
+              <a class="active" href="profile.html"> حسابي </a>
+              <a href="cart.html"> سلة التبرعات </a>
+              <a href="notifications.html"> الاشعارات </a>
+              <a href="editProfile.html"> تعديل الحساب </a>
+              <a href="login.html"> تسجيل خروج </a>
+            </div>
+          </div>
+          <!-- content -->
+          <div class=" col-md-7 col-lg-8 col-xl-9 p-2 profileContent">
+         
+
+          </div>
+        </div>
+      </div>
+    </section>
 
   </content>
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
@@ -199,18 +236,7 @@
   <!-- main -->
   <script src="js/main.js"></script>
   <script src="js/custom.js"></script>
-  <script>
-    document.getElementById("profileImageInput").addEventListener("change", function (event) {
-      const file = event.target.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = function (e) {
-          document.getElementById("profileImagePreview").setAttribute("src", e.target.result);
-        };
-        reader.readAsDataURL(file);
-      }
-    });
-  </script>
+
 </body>
 
 </html>

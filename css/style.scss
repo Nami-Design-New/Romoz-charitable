@@ -1473,74 +1473,78 @@ footer {
 }
 .accountForm {
   margin-bottom: 40px;
-  .cardForm {
-    isolation: isolate;
-    padding: 30px;
-    border-radius: 14px;
-    box-shadow: var(--BigShadow);
-    border: none;
+ 
+}
+.cardForm {
+  isolation: isolate;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: var(--BigShadow);
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  @media (max-width: 768px) {
+    padding: 30px 10px;
+  }
+  .loginImg {
+    width: 100%;
+    max-height: 200px;
+    aspect-ratio: 1;
+    object-fit: contain;
+    @media (max-width: 768px) {
+      padding: 0 30px;
+    }
+  }
+  .formGroup {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    @media (max-width: 768px) {
-      padding: 30px 10px;
-    }
-    .loginImg {
-      width: 100%;
-      max-height: 200px;
-      aspect-ratio: 1;
-      object-fit: contain;
-      @media (max-width: 768px) {
-        padding: 0 30px;
-      }
-    }
-    .formGroup {
+    gap: 8px;
+    label {
+      font-weight: bold;
       display: flex;
-      flex-direction: column;
+      align-items: center;
       gap: 8px;
-      label {
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        img {
-          width: 20px;
-          height: 20px;
-        }
-      }
-      .inputDiv {
-        position: relative;
-        border: 1px solid var(--lightGrayColor);
-        padding: 0px 16px;
-        border-radius: 12px;
-        flex: 1;
-        display: flex;
-        align-items: center;
-        gap: 4px;
-        input {
-          width: 100%;
-          border: none;
-          background: none;
-          height: 24px;
-          min-width: 40px;
-        }
-        span {
-          font-weight: bold;
-          color: var(--mainColor);
-        }
-        &.ltr * {
-          text-align: start;
-          direction: ltr;
-        }
+      img {
+        width: 20px;
+        height: 20px;
       }
     }
-    .formLabel {
-      text-align: center;
+    .inputDiv {
+      position: relative;
+      border: 1px solid var(--lightGrayColor);
+      padding: 0px 16px;
+      border-radius: 12px;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      input {
+        width: 100%;
+        border: none;
+        background: none;
+        height: 24px;
+        min-width: 40px;
+      }
       span {
-        color: var(--mainColor);
         font-weight: bold;
+        color: var(--mainColor);
+      }
+      &.ltr * {
+        text-align: start;
+        direction: ltr;
       }
     }
+  }
+  .formLabel {
+    text-align: center;
+    span {
+      color: var(--mainColor);
+      font-weight: bold;
+    }
+  }
+  .form-control{
+    border-radius: 12px;
   }
 }
 .otp {
@@ -1690,32 +1694,13 @@ footer {
       a {
         padding: 12px 10px;
         display: inline-flex;
-        margin: 3px 0px;
-        border-bottom: 1px solid var(--mainColor);
         flex: 1 140px;
+        border-radius: 8px;
       }
     }
   }
   .profileContent {
-    .editProfile {
-      padding: 20px;
-      background-color: var(--whiteColor);
-      margin-bottom: 20px;
-      border-radius: 10px;
-      isolation: isolate;
-      box-shadow: var(--BigShadow);
-      .head {
-        background-color: var(--mainColor10);
-        color: var(--mainColor);
-        margin-bottom: 20px;
-        padding: 20px;
-        border-radius: 10px;
-        h5 {
-          font-weight: bold;
-          text-transform: uppercase;
-        }
-      }
-    }
+   
     .notifications {
       padding: 10px;
       ul {
@@ -1744,75 +1729,13 @@ footer {
         }
       }
     }
-    .purchases {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      .checkout {
-        background-color: var(--mainColor10);
-        border: 1px solid var(--mainColor30);
-        // height: 100%;
-        border-radius: 16px;
-        padding: 16px 8px;
-        @media (max-width: 768px) {
-          margin-top: 20px;
-        }
-      }
-      .bill {
-        background-color: var(--whiteColor);
-        border-radius: 16px;
-        margin-top: 20px;
-        padding: 8px;
-        list-style: none;
-        li {
-          display: flex;
-          align-items: center;
-          padding-top: 10px;
-          padding-bottom: 20px;
-          border-bottom: 1px dashed #eee;
-          &:last-child {
-            padding-bottom: 0px;
-            border-bottom: none;
-          }
-          img {
-            width: 72px;
-            height: 72px;
-            object-fit: contain;
-            border-radius: 8px;
-            margin-right: 10px;
-          }
-          .info {
-            p {
-              font-weight: bold;
-              margin-bottom: 10px;
-            }
-            span {
-              color: var(--mainColor);
-              font-weight: bold;
-            }
-          }
-        }
-      }
-      .sectionTitle {
-        display: flex;
-        justify-content: space-between;
-        gap: 16px;
-        align-items: center;
-        padding: 0 24px;
-        flex-wrap: wrap;
-        .title {
-          display: flex;
-          flex-direction: column;
-          gap: 4px;
-          text-transform: capitalize;
-          span {
-            font-weight: bold;
-            font-size: 20px;
-            color: var(--mainColor);
-          }
-        }
-      }
-    }
+   
+  }
+  .cardForm{
+   
+    box-shadow: unset;
+    background-color: #f8f8f8;
+    border: 1px solid #e9e9e9;
   }
 }
 

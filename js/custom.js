@@ -172,6 +172,9 @@ $(document).ready(function () {
     });
   });
 });
+
+
+
 // ////////////////////////////////////////
 // ////////////////////////////////////////
 // ////////////////////////////////////////
@@ -255,149 +258,18 @@ function dehighlight(el) {
   }
 }
 
-////////////////////////////// ///////////////////////
-// Text Animation
-////////////////////////////// ///////////////////////
-// lines
-const animate_lines = document.querySelectorAll(".animate_lines");
-animate_lines.forEach((areveal) => {
-  var duration_value = 1;
-  var onscroll_value = 1;
-  var stagger_value = 0.08;
-  var data_delay = 0.5;
-  if (areveal.getAttribute("data-duration")) {
-    duration_value = areveal.getAttribute("data-duration");
-  }
-  if (areveal.getAttribute("data-on-scroll")) {
-    onscroll_value = areveal.getAttribute("data-on-scroll");
-  }
-  if (areveal.getAttribute("data-stagger")) {
-    stagger_value = areveal.getAttribute("data-stagger");
-  }
-  if (areveal.getAttribute("data-delay")) {
-    data_delay = areveal.getAttribute("data-delay");
-  }
-  areveal.split = new SplitText(areveal, {
-    // type: "lines,words,chars",
-    type: "lines,words",
-    linesClass: "anim-reveal-line",
+// profile Image Input
+document
+  .getElementById("profileImageInput")
+  .addEventListener("change", function (event) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        document
+          .getElementById("profileImagePreview")
+          .setAttribute("src", e.target.result);
+      };
+      reader.readAsDataURL(file);
+    }
   });
-  if (onscroll_value == 1) {
-    areveal.anim = gsap.from(areveal.split.lines, {
-      scrollTrigger: {
-        trigger: areveal,
-        start: "top 90%",
-      },
-      duration: duration_value,
-      delay: data_delay,
-      ease: "circ.out",
-      y: 80,
-      stagger: stagger_value,
-      opacity: 0,
-    });
-  } else {
-    areveal.anim = gsap.from(areveal.split.lines, {
-      duration: duration_value,
-      delay: data_delay,
-      ease: "circ.out",
-      y: 80,
-      stagger: stagger_value,
-      opacity: 0,
-    });
-  }
-});
-// words
-const animate_words = document.querySelectorAll(".animate_words");
-animate_words.forEach((areveal) => {
-  var duration_value = 1;
-  var onscroll_value = 1;
-  var stagger_value = 0.01;
-  var data_delay = 0.5;
-  if (areveal.getAttribute("data-duration")) {
-    duration_value = areveal.getAttribute("data-duration");
-  }
-  if (areveal.getAttribute("data-on-scroll")) {
-    onscroll_value = areveal.getAttribute("data-on-scroll");
-  }
-  if (areveal.getAttribute("data-stagger")) {
-    stagger_value = areveal.getAttribute("data-stagger");
-  }
-  if (areveal.getAttribute("data-delay")) {
-    data_delay = areveal.getAttribute("data-delay");
-  }
-  areveal.split = new SplitText(areveal, {
-    // type: "lines,words,chars",
-    type: "lines,words",
-    linesClass: "anim-reveal-line",
-  });
-  if (onscroll_value == 1) {
-    areveal.anim = gsap.from(areveal.split.words, {
-      scrollTrigger: {
-        trigger: areveal,
-        start: "top 90%",
-      },
-      duration: duration_value,
-      delay: data_delay,
-      ease: "circ.out",
-      y: 80,
-      stagger: stagger_value,
-      opacity: 0,
-    });
-  } else {
-    areveal.anim = gsap.from(areveal.split.words, {
-      duration: duration_value,
-      delay: data_delay,
-      ease: "circ.out",
-      y: 80,
-      stagger: stagger_value,
-      opacity: 0,
-    });
-  }
-});
-// chars
-const animate_chars = document.querySelectorAll(".animate_chars");
-animate_chars.forEach((areveal) => {
-  var duration_value = 1;
-  var onscroll_value = 1;
-  var stagger_value = 0.003;
-  var data_delay = 0.5;
-  if (areveal.getAttribute("data-duration")) {
-    duration_value = areveal.getAttribute("data-duration");
-  }
-  if (areveal.getAttribute("data-on-scroll")) {
-    onscroll_value = areveal.getAttribute("data-on-scroll");
-  }
-  if (areveal.getAttribute("data-stagger")) {
-    stagger_value = areveal.getAttribute("data-stagger");
-  }
-  if (areveal.getAttribute("data-delay")) {
-    data_delay = areveal.getAttribute("data-delay");
-  }
-  areveal.split = new SplitText(areveal, {
-    type: "lines,words,chars",
-    linesClass: "anim-reveal-line",
-  });
-  if (onscroll_value == 1) {
-    areveal.anim = gsap.from(areveal.split.chars, {
-      scrollTrigger: {
-        trigger: areveal,
-        start: "top 90%",
-      },
-      duration: duration_value,
-      delay: data_delay,
-      ease: "circ.out",
-      y: 80,
-      stagger: stagger_value,
-      opacity: 0,
-    });
-  } else {
-    areveal.anim = gsap.from(areveal.split.chars, {
-      duration: duration_value,
-      delay: data_delay,
-      ease: "circ.out",
-      y: 80,
-      stagger: stagger_value,
-      opacity: 0,
-    });
-  }
-});

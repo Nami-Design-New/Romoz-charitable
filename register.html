@@ -48,7 +48,7 @@
       </nav>
       <!-- Actions -->
       <div class="moreActions">
-        <a href="#!" class="link" data-bs-toggle="tooltip" title=" سلة التبرعات "> <img src="img/icons/cart.svg" alt="">
+        <a href="cart.html" class="link" data-bs-toggle="tooltip" title=" سلة التبرعات "> <img src="img/icons/cart.svg" alt="">
           <span class="count">3</span>
         </a>
         <a href="#!" class="link" data-bs-toggle="modal" data-bs-target="#donateQuickly">
@@ -63,7 +63,7 @@
           </button>
           <div class="dropdown-menu" aria-labelledby="myAccount">
             <a href="login.html" class="dropdown-item"> تسجيل دخول </a>
-            <a href="account.html" class="dropdown-item"> حسابي </a>
+            <a href="profile.html" class="dropdown-item"> حسابي </a>
             <a href="notifications.html" class="dropdown-item"> الاشعارات </a>
             <a href="editProfile.html" class="dropdown-item"> تعديل الحساب </a>
             <a href="#!" class="dropdown-item"> تسجيل خروج </a>
@@ -117,7 +117,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-lg-6 col-xl-5 m-auto p-2">
-            <form action="account.html" class="cardForm" data-aos="fade-up">
+            <form action="profile.html" class="cardForm" data-aos="fade-up">
 
               <div class="profileImage">
                 <input type="file" id="profileImageInput" accept="image/*" />
@@ -224,18 +224,7 @@
   <!-- main -->
   <script src="js/main.js"></script>
   <script src="js/custom.js"></script>
-  <script>
-    document.getElementById("profileImageInput").addEventListener("change", function (event) {
-      const file = event.target.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = function (e) {
-          document.getElementById("profileImagePreview").setAttribute("src", e.target.result);
-        };
-        reader.readAsDataURL(file);
-      }
-    });
-  </script>
+
 </body>
 
 </html>
