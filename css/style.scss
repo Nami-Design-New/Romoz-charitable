@@ -1601,7 +1601,29 @@ footer {
     display: none;
   }
 }
-
+.statistics{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  .statistic {
+    background-color: var(--whiteColor);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+    .info {
+       .title {
+      font-weight: bold;
+    }
+    .value {
+      font-weight: bold;
+    }
+    }
+   
+  }
+}
 .profile {
   padding: 40px 0;
   .userHeader {
