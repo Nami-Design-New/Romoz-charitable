@@ -1699,6 +1699,9 @@ footer .border-top {
   font-weight: bold;
   font-size: 40px;
 }
+.statistics .statistic .info .value span {
+  font-weight: normal;
+}
 .statistics .statistic:nth-child(1) {
   background-color: #e8f2fd;
 }
@@ -1716,7 +1719,7 @@ footer .border-top {
 }
 
 .profile {
-  padding: 40px 0;
+  margin-bottom: 40px;
 }
 .profile .userHeader {
   margin-bottom: 32px;
