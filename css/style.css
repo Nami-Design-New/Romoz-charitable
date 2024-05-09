@@ -848,6 +848,7 @@ footer .border-top {
 }
 .projects .project .projectInfo .title {
   font-weight: bold;
+  font-size: 16px;
 }
 .projects .project .projectInfo .description {
   color: var(--grayColor);
@@ -876,7 +877,7 @@ footer .border-top {
 .projects .project .projectInfo .gifts .gift span {
   font-weight: bold;
 }
-.projects .project .projectInfo .gifts .gift:hover {
+.projects .project .projectInfo .gifts .gift.active, .projects .project .projectInfo .gifts .gift:hover {
   background-color: var(--mainColor);
   color: var(--whiteColor);
 }
@@ -2021,6 +2022,183 @@ footer .border-top {
 .paymentForm .title {
   font-weight: bold;
   padding: 8px 12px;
+}
+
+.projectDetailsPage {
+  margin-bottom: 40px;
+}
+.projectDetailsPage .projectImg {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 100%;
+  border-radius: 16px;
+  transition: var(--transition);
+}
+.projectDetailsPage .projectImg .shareProject {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  padding: 4px;
+  transition: var(--transition);
+  background-color: var(--whiteColor);
+  border-radius: 100px;
+}
+.projectDetailsPage .projectImg .shareProject a {
+  background-color: var(--whiteColor);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+}
+.projectDetailsPage .projectImg .shareProject a img {
+  transition: var(--transition);
+  width: 16px;
+  height: 16px;
+}
+.projectDetailsPage .projectImg .shareProject a:hover.twitter {
+  background-color: #1da1f2;
+}
+.projectDetailsPage .projectImg .shareProject a:hover.facebook {
+  background-color: #1877f2;
+}
+.projectDetailsPage .projectImg .shareProject a:hover.whatsapp {
+  background-color: #25d366;
+}
+.projectDetailsPage .projectImg .shareProject a:hover.instagram {
+  background-color: #e1306c;
+}
+.projectDetailsPage .projectImg .shareProject a:hover img {
+  filter: brightness(0) invert(1);
+}
+.projectDetailsPage .projectImg .shareProject a.share {
+  background-color: var(--mainColor);
+}
+.projectDetailsPage .projectImg .shareProject a.share img {
+  filter: brightness(0) invert(1);
+}
+.projectDetailsPage .projectImg .img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  aspect-ratio: 1;
+  width: 100%;
+  transition: var(--transition);
+  max-height: 600px;
+}
+.projectDetailsPage .projectImg .img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  transition: var(--transition);
+}
+.projectDetailsPage .projectInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  padding: 16px;
+}
+.projectDetailsPage .projectInfo .title {
+  font-weight: bold;
+}
+.projectDetailsPage .projectInfo .description {
+  color: var(--grayColor);
+  flex: 1;
+}
+.projectDetailsPage .projectInfo .gifts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0;
+  flex: 1;
+}
+.projectDetailsPage .projectInfo .gifts .gift {
+  display: flex;
+  flex: 1;
+  min-width: 120px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 8px;
+  border-radius: 100px;
+  background-color: #eeeeee;
+  color: var(--darkColor);
+  transition: var(--transition);
+}
+.projectDetailsPage .projectInfo .gifts .gift span {
+  font-weight: bold;
+}
+.projectDetailsPage .projectInfo .gifts .gift.active, .projectDetailsPage .projectInfo .gifts .gift:hover {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+}
+.projectDetailsPage .projectInfo .gifts .gift.donate {
+  min-width: 250px;
+}
+.projectDetailsPage .projectInfo .actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.projectDetailsPage .projectInfo .actions .inputDiv {
+  position: relative;
+  border: 1px solid var(--mainColor20);
+  padding: 8px 16px;
+  border-radius: 100px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.projectDetailsPage .projectInfo .actions .inputDiv input {
+  width: 100%;
+  border: none;
+  background: none;
+  height: 24px;
+  min-width: 40px;
+}
+.projectDetailsPage .projectInfo .actions .inputDiv span {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--mainColor);
+}
+.projectDetailsPage .projectInfo .actions .action {
+  color: var(--darkColor);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  justify-content: center;
+  background-color: var(--mainColor10);
+  height: 40px;
+  min-width: 40px;
+  border-radius: 100px;
+  transition: var(--transition);
+  font-weight: bold;
+}
+.projectDetailsPage .projectInfo .actions .action img {
+  min-width: 20px;
+  height: 20px;
+  transition: var(--transition);
+}
+.projectDetailsPage .projectInfo .actions .action:hover {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+}
+.projectDetailsPage .projectInfo .actions .action:hover img {
+  filter: brightness(0) invert(1);
 }
 
 @media screen and (max-width: 768px) {

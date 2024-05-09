@@ -816,6 +816,7 @@ footer {
       padding: 16px;
       .title {
         font-weight: bold;
+        font-size: 16px;
       }
       .description {
         color: var(--grayColor);
@@ -842,6 +843,7 @@ footer {
           span {
             font-weight: bold;
           }
+          &.active,
           &:hover {
             background-color: var(--mainColor);
             color: var(--whiteColor);
@@ -1948,11 +1950,192 @@ footer {
   border: 1px solid #e9e9e9;
   border-radius: 16px;
   margin: 24px 0;
-  .title{
+  .title {
     font-weight: bold;
     padding: 8px 12px;
   }
 }
+.projectDetailsPage {
+  margin-bottom: 40px;
+  .projectImg {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    // padding: 8px;
+    height: 100%;
+    border-radius: 16px;
+    transition: var(--transition);
+    .shareProject {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      z-index: 2;
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      padding: 4px;
+      transition: var(--transition);
+      background-color: var(--whiteColor);
+      border-radius: 100px;
+      a {
+        background-color: var(--whiteColor);
+        width: 32px;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100px;
+        img {
+          transition: var(--transition);
+          width: 16px;
+          height: 16px;
+        }
+        &:hover {
+          &.twitter {
+            background-color: #1da1f2;
+          }
+          &.facebook {
+            background-color: #1877f2;
+          }
+          &.whatsapp {
+            background-color: #25d366;
+          }
+          &.instagram {
+            background-color: #e1306c;
+          }
+          img {
+            filter: brightness(0) invert(1);
+          }
+        }
+        &.share {
+          background-color: var(--mainColor);
+          img {
+            filter: brightness(0) invert(1);
+          }
+        }
+      }
+    }
+    .img {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      aspect-ratio: 1;
+      width: 100%;
+      transition: var(--transition);
+      max-height: 600px;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: var(--transition);
+      }
+    }
+  }
+
+  .projectInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    padding: 16px;
+    .title {
+      font-weight: bold;
+    }
+    .description {
+      color: var(--grayColor);
+      flex: 1;
+    }
+    .gifts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 8px 0;
+      flex: 1;
+      .gift {
+        display: flex;
+        flex: 1;
+        min-width: 120px;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        padding: 8px 8px;
+        border-radius: 100px;
+        background-color: #eeeeee;
+        color: var(--darkColor);
+        transition: var(--transition);
+        span {
+          font-weight: bold;
+        }
+        &.active,
+        &:hover {
+          background-color: var(--mainColor);
+          color: var(--whiteColor);
+        }
+        &.donate {
+          min-width: 250px;
+        }
+      }
+    }
+    .actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      .inputDiv {
+        position: relative;
+        border: 1px solid var(--mainColor20);
+        padding: 8px 16px;
+        border-radius: 100px;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        input {
+          width: 100%;
+          border: none;
+          background: none;
+          height: 24px;
+          min-width: 40px;
+        }
+        span {
+          font-size: 12px;
+          font-weight: bold;
+          color: var(--mainColor);
+        }
+      }
+      .action {
+        color: var(--darkColor);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px;
+        justify-content: center;
+        background-color: var(--mainColor10);
+        height: 40px;
+        min-width: 40px;
+        border-radius: 100px;
+        transition: var(--transition);
+        font-weight: bold;
+        img {
+          min-width: 20px;
+          height: 20px;
+          transition: var(--transition);
+        }
+        &:hover {
+          background-color: var(--mainColor);
+          color: var(--whiteColor);
+          img {
+            filter: brightness(0) invert(1);
+          }
+        }
+      }
+    }
+  }
+}
+
+// responsive
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 26px;
