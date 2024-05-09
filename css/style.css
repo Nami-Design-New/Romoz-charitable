@@ -861,6 +861,7 @@ footer .border-top {
   margin: 8px 0;
   flex: 1;
 }
+.projects .project .projectInfo .gifts .donate,
 .projects .project .projectInfo .gifts .gift {
   display: flex;
   flex: 1;
@@ -874,13 +875,17 @@ footer .border-top {
   color: var(--darkColor);
   transition: var(--transition);
 }
+.projects .project .projectInfo .gifts .donate span,
 .projects .project .projectInfo .gifts .gift span {
   font-weight: bold;
 }
-.projects .project .projectInfo .gifts .gift.active, .projects .project .projectInfo .gifts .gift:hover {
-  background-color: var(--mainColor);
-  color: var(--whiteColor);
+.projects .project .projectInfo .gifts .donate.active, .projects .project .projectInfo .gifts .donate:hover,
+.projects .project .projectInfo .gifts .gift.active,
+.projects .project .projectInfo .gifts .gift:hover {
+  background-color: var(--mainColor10);
+  color: var(--mainColor);
 }
+.projects .project .projectInfo .gifts .donate.donate,
 .projects .project .projectInfo .gifts .gift.donate {
   min-width: 250px;
 }
@@ -924,12 +929,17 @@ footer .border-top {
   min-width: 40px;
   border-radius: 100px;
   transition: var(--transition);
-  font-weight: bold;
+}
+.projects .project .projectInfo .actions .action:has(span) {
+  flex: 1;
 }
 .projects .project .projectInfo .actions .action img {
   min-width: 20px;
   height: 20px;
   transition: var(--transition);
+}
+.projects .project .projectInfo .actions .action span {
+  padding-left: 8px;
 }
 .projects .project .projectInfo .actions .action:hover {
   background-color: var(--mainColor);
@@ -1921,6 +1931,7 @@ footer .border-top {
 }
 .cart .cartItem .info .projectTitle {
   font-weight: bold;
+  font-size: 16px;
 }
 .cart .cartItem .price {
   white-space: nowrap;
@@ -2123,6 +2134,7 @@ footer .border-top {
   margin: 8px 0;
   flex: 1;
 }
+.projectDetailsPage .projectInfo .gifts .donate,
 .projectDetailsPage .projectInfo .gifts .gift {
   display: flex;
   flex: 1;
@@ -2136,13 +2148,17 @@ footer .border-top {
   color: var(--darkColor);
   transition: var(--transition);
 }
+.projectDetailsPage .projectInfo .gifts .donate span,
 .projectDetailsPage .projectInfo .gifts .gift span {
   font-weight: bold;
 }
-.projectDetailsPage .projectInfo .gifts .gift.active, .projectDetailsPage .projectInfo .gifts .gift:hover {
-  background-color: var(--mainColor);
-  color: var(--whiteColor);
+.projectDetailsPage .projectInfo .gifts .donate.active, .projectDetailsPage .projectInfo .gifts .donate:hover,
+.projectDetailsPage .projectInfo .gifts .gift.active,
+.projectDetailsPage .projectInfo .gifts .gift:hover {
+  background-color: var(--mainColor10);
+  color: var(--mainColor);
 }
+.projectDetailsPage .projectInfo .gifts .donate.donate,
 .projectDetailsPage .projectInfo .gifts .gift.donate {
   min-width: 250px;
 }
@@ -2186,12 +2202,17 @@ footer .border-top {
   min-width: 40px;
   border-radius: 100px;
   transition: var(--transition);
-  font-weight: bold;
+}
+.projectDetailsPage .projectInfo .actions .action:has(span) {
+  flex: 1;
 }
 .projectDetailsPage .projectInfo .actions .action img {
   min-width: 20px;
   height: 20px;
   transition: var(--transition);
+}
+.projectDetailsPage .projectInfo .actions .action span {
+  padding-left: 8px;
 }
 .projectDetailsPage .projectInfo .actions .action:hover {
   background-color: var(--mainColor);

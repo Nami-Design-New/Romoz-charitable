@@ -828,6 +828,7 @@ footer {
         gap: 8px;
         margin: 8px 0;
         flex: 1;
+        .donate,
         .gift {
           display: flex;
           flex: 1;
@@ -845,8 +846,8 @@ footer {
           }
           &.active,
           &:hover {
-            background-color: var(--mainColor);
-            color: var(--whiteColor);
+            background-color: var(--mainColor10);
+            color: var(--mainColor);
           }
           &.donate {
             min-width: 250px;
@@ -892,11 +893,16 @@ footer {
           min-width: 40px;
           border-radius: 100px;
           transition: var(--transition);
-          font-weight: bold;
+          &:has(span) {
+           flex: 1; 
+          }
           img {
             min-width: 20px;
             height: 20px;
             transition: var(--transition);
+          }
+          span{
+            padding-left: 8px;
           }
           &:hover {
             background-color: var(--mainColor);
@@ -1853,6 +1859,7 @@ footer {
       min-width: 200px;
       .projectTitle {
         font-weight: bold;
+        font-size: 16px;
       }
     }
     .price {
@@ -2033,7 +2040,6 @@ footer {
       }
     }
   }
-
   .projectInfo {
     display: flex;
     flex-direction: column;
@@ -2053,6 +2059,7 @@ footer {
       gap: 8px;
       margin: 8px 0;
       flex: 1;
+      .donate,
       .gift {
         display: flex;
         flex: 1;
@@ -2070,8 +2077,8 @@ footer {
         }
         &.active,
         &:hover {
-          background-color: var(--mainColor);
-          color: var(--whiteColor);
+          background-color: var(--mainColor10);
+          color: var(--mainColor);
         }
         &.donate {
           min-width: 250px;
@@ -2117,11 +2124,16 @@ footer {
         min-width: 40px;
         border-radius: 100px;
         transition: var(--transition);
-        font-weight: bold;
+        &:has(span) {
+         flex: 1; 
+        }
         img {
           min-width: 20px;
           height: 20px;
           transition: var(--transition);
+        }
+        span{
+          padding-left: 8px;
         }
         &:hover {
           background-color: var(--mainColor);
@@ -2134,7 +2146,6 @@ footer {
     }
   }
 }
-
 // responsive
 @media screen and (max-width: 768px) {
   h1 {

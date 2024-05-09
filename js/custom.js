@@ -164,15 +164,40 @@ $(document).ready(function () {
         .next()
         .val(+$(this).next().val() - 1);
   });
-
   $(".copyText").click(function () {
     var text = $(this).prev("p").text();
     navigator.clipboard.writeText(text).then(function () {
       $("#alertMessage").slideDown().delay(1500).fadeOut();
     });
   });
+  $(".project , .projectDetailsPage").each(function() {
+    var $project = $(this);
+    var $gifts = $project.find(".gifts");
+    var $inputDiv = $project.find(".inputDiv");
+    var $quantity = $project.find(".quantity");
+    // Hide inputDiv and quantity initially
+    $inputDiv.hide();
+    $quantity.hide();
+    $gifts.find('.gift, .donate').click(function(){
+      $gifts.find('.gift, .donate').removeClass('active');
+      $(this).addClass('active');
+      if ($(this).hasClass('gift') || $(this).hasClass('donate')) {
+        if ($(this).hasClass('active')) {
+          $project.find('.action span').remove();
+        } else {
+          $project.find('.action span').show();
+        }
+      }
+      if ($(this).hasClass('gift')) {
+        $quantity.show();
+        $inputDiv.hide();
+      } else if ($(this).hasClass('donate')) {
+        $quantity.hide();
+        $inputDiv.show();
+      }
+    });
+  });
 });
-
 // ////////////////////////////////////////
 // ////////////////////////////////////////
 // ////////////////////////////////////////
@@ -200,7 +225,6 @@ $(document).ready(function () {
       });
     });
   }
-
   // aos
   AOS.init({
     offset: 20,
@@ -246,7 +270,6 @@ $(document).ready(function () {
   const elements = document.querySelectorAll(".counterUp");
   elements.forEach((el) => IO.observe(el));
 });
-
 function highlight(el) {
   el.previousElementSibling.classList.add("h");
 }
@@ -255,7 +278,6 @@ function dehighlight(el) {
     el.previousElementSibling.classList.remove("h");
   }
 }
-
 // profile Image Input
 document
   .getElementById("profileImageInput")
