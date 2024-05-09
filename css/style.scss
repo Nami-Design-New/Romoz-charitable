@@ -654,7 +654,7 @@ footer {
   width: min(100% - 4px, 1440px);
   aspect-ratio: 16/9;
   margin: 8px auto;
-  border-radius: 16px;
+  border-radius: 8px;
   .swiper-slide {
     position: relative;
     display: flex;
@@ -2031,14 +2031,9 @@ footer {
       aspect-ratio: 1;
       width: 100%;
       transition: var(--transition);
+      object-fit: cover;
       max-height: 600px;
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        object-position: center;
-        transition: var(--transition);
-      }
+     
     }
   }
   .projectInfo {

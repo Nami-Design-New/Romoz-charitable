@@ -680,7 +680,7 @@ footer .border-top {
   width: min(100% - 4px, 1440px);
   aspect-ratio: 16/9;
   margin: 8px auto;
-  border-radius: 16px;
+  border-radius: 8px;
 }
 .mainSlider .swiper-slide {
   position: relative;
@@ -2103,16 +2103,9 @@ footer .border-top {
   aspect-ratio: 1;
   width: 100%;
   transition: var(--transition);
-  max-height: 600px;
-}
-.projectDetailsPage .projectImg .img img {
-  height: 100%;
-  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  transition: var(--transition);
+  max-height: 600px;
 }
 .projectDetailsPage .projectInfo {
   display: flex;
