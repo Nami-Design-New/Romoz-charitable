@@ -1687,6 +1687,7 @@ footer .border-top {
   flex: 1;
   align-items: center;
   padding: 8px;
+  min-width: 300px;
 }
 .statistics .statistic .icon {
   border-radius: 100%;
