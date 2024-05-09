@@ -878,7 +878,6 @@ footer {
             color: var(--mainColor);
           }
         }
-
         .action {
           color: var(--darkColor);
           display: flex;
@@ -1175,42 +1174,42 @@ footer {
       font-weight: bold;
       margin-bottom: 16px;
     }
-    .textBlock {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      p {
-        flex: 1;
-        background-color: var(--whiteColor);
-        padding: 8px;
-        border-radius: 8px;
-        text-align: center;
-        font-weight: bold;
-      }
-      span {
-        font-weight: bold;
-      }
-      img {
-        width: 24px;
-        aspect-ratio: 1;
-      }
-    }
     .bankImg {
       width: 100%;
       aspect-ratio: 16/9;
       object-fit: contain;
     }
   }
-  .alert {
-    padding: 8px 16px;
-    background-color: var(--darkColor);
-    color: white;
-    border-radius: 100px;
-    position: fixed;
-    bottom: 16px;
-    left: 16px;
-    z-index: 9999;
-    display: none;
+}
+.alertMessage {
+  padding: 8px 16px;
+  background-color: var(--darkColor);
+  color: white;
+  border-radius: 100px;
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  z-index: 9999;
+  display: none;
+}
+.textBlock {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  p {
+    flex: 1;
+    background-color: var(--whiteColor);
+    padding: 8px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+  }
+  span {
+    font-weight: bold;
+  }
+  img {
+    width: 24px;
+    aspect-ratio: 1;
   }
 }
 .donateQuickly {
@@ -1883,7 +1882,6 @@ footer {
       align-items: center;
       gap: 4px;
       max-width: 200px;
-
       input {
         width: 100%;
         border: none;
@@ -1916,17 +1914,17 @@ footer {
     justify-content: center;
     span {
       font-weight: bold;
-      font-size: 32px;
+      font-size: 28px;
       color: var(--mainColor);
     }
   }
-  .paymentMethod{
+  .paymentMethod {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8px;
     padding: 12px;
-    .payBtn{
+    .payBtn {
       display: flex;
       align-items: center;
       gap: 8px;
@@ -1935,10 +1933,24 @@ footer {
       background-color: var(--whiteColor);
       border-radius: 8px;
       box-shadow: var(--shadow);
-      img{
+      img {
         height: 24px;
       }
     }
+  }
+}
+.paymentForm {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 4px;
+  background-color: #f8f8f8;
+  border: 1px solid #e9e9e9;
+  border-radius: 16px;
+  margin: 24px 0;
+  .title{
+    font-weight: bold;
+    padding: 8px 12px;
   }
 }
 @media screen and (max-width: 768px) {

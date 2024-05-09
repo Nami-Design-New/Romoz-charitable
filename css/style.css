@@ -1217,33 +1217,14 @@ footer .border-top {
   font-weight: bold;
   margin-bottom: 16px;
 }
-.bankAccounts .bank .textBlock {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-.bankAccounts .bank .textBlock p {
-  flex: 1;
-  background-color: var(--whiteColor);
-  padding: 8px;
-  border-radius: 8px;
-  text-align: center;
-  font-weight: bold;
-}
-.bankAccounts .bank .textBlock span {
-  font-weight: bold;
-}
-.bankAccounts .bank .textBlock img {
-  width: 24px;
-  aspect-ratio: 1;
-}
 .bankAccounts .bank .bankImg {
   width: 100%;
   aspect-ratio: 16/9;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.bankAccounts .alert {
+
+.alertMessage {
   padding: 8px 16px;
   background-color: var(--darkColor);
   color: white;
@@ -1253,6 +1234,27 @@ footer .border-top {
   left: 16px;
   z-index: 9999;
   display: none;
+}
+
+.textBlock {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.textBlock p {
+  flex: 1;
+  background-color: var(--whiteColor);
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+.textBlock span {
+  font-weight: bold;
+}
+.textBlock img {
+  width: 24px;
+  aspect-ratio: 1;
 }
 
 .donateQuickly .modal-content {
@@ -1982,7 +1984,7 @@ footer .border-top {
 }
 .totalCart .total span {
   font-weight: bold;
-  font-size: 32px;
+  font-size: 28px;
   color: var(--mainColor);
 }
 .totalCart .paymentMethod {
@@ -2004,6 +2006,21 @@ footer .border-top {
 }
 .totalCart .paymentMethod .payBtn img {
   height: 24px;
+}
+
+.paymentForm {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 4px;
+  background-color: #f8f8f8;
+  border: 1px solid #e9e9e9;
+  border-radius: 16px;
+  margin: 24px 0;
+}
+.paymentForm .title {
+  font-weight: bold;
+  padding: 8px 12px;
 }
 
 @media screen and (max-width: 768px) {
