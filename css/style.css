@@ -1884,15 +1884,26 @@ footer .border-top {
 .cart {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.cart .title {
+  font-weight: bold;
+  color: var(--mainColor);
 }
 .cart .cartItem {
   display: flex;
   align-items: center;
   gap: 16px;
+  flex-wrap: wrap;
+  row-gap: 8px;
+  padding-bottom: 8px;
+  padding: 8px;
+  border-radius: 12px;
+  border: 1px solid #eee;
 }
 .cart .cartItem .img {
-  width: 80px;
+  min-width: 80px;
   height: 80px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1902,10 +1913,97 @@ footer .border-top {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
+  min-width: 200px;
 }
-.cart .cartItem .info h3 {
-  font-size: 18px;
+.cart .cartItem .info .projectTitle {
+  font-weight: bold;
+}
+.cart .cartItem .price {
+  white-space: nowrap;
+  min-width: 100px;
+}
+.cart .cartItem .price span {
+  font-weight: bold;
+  font-size: 20px;
+}
+.cart .cartItem .quantity {
+  max-width: 200px;
+}
+.cart .cartItem .del {
+  cursor: pointer;
+}
+.cart .cartItem .del img {
+  width: 24px;
+  height: 24px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.cart .cartItem .inputDiv {
+  position: relative;
+  border: 1px solid var(--mainColor20);
+  padding: 8px 16px;
+  border-radius: 100px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  max-width: 200px;
+}
+.cart .cartItem .inputDiv input {
+  width: 100%;
+  border: none;
+  background: none;
+  height: 24px;
+  min-width: 40px;
+}
+.cart .cartItem .inputDiv span {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--mainColor);
+}
+
+.totalCart {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 8px;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: var(--mainColor10);
+  text-align: center;
+}
+.totalCart .total {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.totalCart .total span {
+  font-weight: bold;
+  font-size: 32px;
+  color: var(--mainColor);
+}
+.totalCart .paymentMethod {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+}
+.totalCart .paymentMethod .payBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  padding-left: 20px;
+  background-color: var(--whiteColor);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+.totalCart .paymentMethod .payBtn img {
+  height: 24px;
 }
 
 @media screen and (max-width: 768px) {

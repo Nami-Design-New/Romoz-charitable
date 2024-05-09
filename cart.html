@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!-- Required meta tags -->
   <meta charset="UTF-8" />
@@ -20,6 +21,7 @@
   <!-- Custom style  -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
   <!-- ================ Header ================= -->
   <header>
@@ -144,29 +146,97 @@
           <div class=" col-md-7 col-lg-8 col-xl-9 p-2 profileContent">
             <!-- cart -->
             <div class="cart">
-            
+              <div class="title"> التبرع السربع </div>
               <!-- cartItem -->
               <div class="cartItem">
-                <div class="img">
-                  <img src="img/s.jpg" alt="">
-                </div>
                 <div class="info">
-                  <h3> مشروع عام </h3>
-                  <div class="price">
-                    <span> 500 ريال </span>
-                  </div>
+                  <h4> الوقف بمكة </h4>
                 </div>
+                <div class="inputDiv">
+                  <input type="number" value="1850" min="0" placeholder="ادخل المبلغ">
+                  <span> ريال </span>
+                </div>
+                <button class="del"> <img src="img/icons/trash.svg" alt=""> </button>
+              </div>
+              <!-- cartItem -->
+              <div class="cartItem">
+                <div class="info">
+                  <h4> المشاريع العامة </h4>
+                </div>
+                <div class="inputDiv">
+                  <input type="number" value="1500" min="0" placeholder="ادخل المبلغ">
+                  <span> ريال </span>
+                </div>
+                <button class="del"> <img src="img/icons/trash.svg" alt=""> </button>
+              </div>
+            </div>
+            <!-- cart -->
+            <div class="cart">
+              <div class="title"> مشاريع الدعم </div>
+              <!-- cartItem -->
+              <div class="cartItem">
+                <a data-fancybox="" href="img/s.jpg">
+                  <img class="img" src="img/s.jpg" alt="">
+                </a>
+                <div class="info">
+                  <h5 class="projectTitle"> التدريب والتأهيل للايتام </h5>
+                  <p> بما تجود به نفسك (التبرع بأي مبلغ) </p>
+                </div>
+                <p class="price"> <span> 256 </span> ريال </p>
                 <div class="quantity">
                   <button class="min"> - </button>
                   <input type="text" class="qty" value="0" min="0" />
                   <button class="plus"> + </button>
                 </div>
-                <div class="del">
-                  <button class="btn"> حذف </button>
+                <button class="del"> <img src="img/icons/trash.svg" alt=""> </button>
+              </div>
+              <!-- cartItem -->
+              <div class="cartItem">
+                <a data-fancybox="" href="img/s.jpg">
+                  <img class="img" src="img/s.jpg" alt="">
+                </a>
+                <div class="info">
+                  <h5 class="projectTitle"> التدريب والتأهيل للايتام </h5>
+                  <p> 2 سهم 400 ريال </p>
+                </div>
+                <p class="price"> <span> 400 </span> ريال </p>
+                <div class="quantity">
+                  <button class="min"> - </button>
+                  <input type="text" class="qty" value="0" min="0" />
+                  <button class="plus"> + </button>
+                </div>
+                <button class="del"> <img src="img/icons/trash.svg" alt=""> </button>
+              </div>
+              <!-- cartItem -->
+              <div class="cartItem">
+                <a data-fancybox="" href="img/s.jpg">
+                  <img class="img" src="img/s.jpg" alt="">
+                </a>
+                <div class="info">
+                  <h5 class="projectTitle"> التدريب والتأهيل للايتام </h5>
+                  <p> 2 سهم 400 ريال </p>
+                </div>
+                <p class="price"> <span> 400 </span> ريال </p>
+                <div class="quantity">
+                  <button class="min"> - </button>
+                  <input type="text" class="qty" value="0" min="0" />
+                  <button class="plus"> + </button>
+                </div>
+                <button class="del"> <img src="img/icons/trash.svg" alt=""> </button>
+              </div>
+            </div>
+            <!-- totalCart -->
+            <div class="totalCart">
+              <h3 class="total"> المبلغ الإجمالي هو <span> 5440 </span> ريال </h3>
+              <div class="payment">
+                <h6> اتمام عملية الدفع عن طريق </h6>
+                <div class="paymentMethod">
+                  <button class="payBtn"> <img src="img/icons/visa.svg" alt=""> <img src="img/icons/mastercard.svg" alt=""> البطاقة
+                    الائتمانية </button>
+                  <button class="payBtn"> <img src="img/icons/bank.svg" alt=""> التحويل البنكي </button>
                 </div>
               </div>
             </div>
-          </div>
     </section>
   </content>
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
@@ -254,4 +324,5 @@
   <script src="js/main.js"></script>
   <script src="js/custom.js"></script>
 </body>
+
 </html>
