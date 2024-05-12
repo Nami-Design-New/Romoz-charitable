@@ -567,13 +567,13 @@ footer .link p span {
   color: var(--mainColor);
 }
 footer .link:hover p {
-  color: var(--goldColor);
+  color: var(--mainColor);
 }
 footer .socialMedia a img {
   filter: brightness(0) invert(1) contrast(0.8);
 }
 footer .border-top {
-  --bs-border-color: #eee5cb;
+  --bs-border-color: var(--mainColor10);
 }
 
 .swiperControl {
@@ -951,6 +951,14 @@ footer .border-top {
   height: 20px;
   transition: var(--transition);
 }
+.projects .project .projectInfo .actions .action svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--mainColor);
+}
+.projects .project .projectInfo .actions .action svg * {
+  fill: var(--mainColor);
+}
 .projects .project .projectInfo .actions .action span {
   padding-left: 8px;
   white-space: nowrap;
@@ -961,6 +969,12 @@ footer .border-top {
 }
 .projects .project .projectInfo .actions .action:hover img {
   filter: brightness(0) invert(1);
+}
+.projects .project .projectInfo .actions .action:hover svg {
+  fill: var(--whiteColor);
+}
+.projects .project .projectInfo .actions .action:hover svg * {
+  fill: var(--whiteColor);
 }
 .projects .project:hover {
   transform: translateY(-8px);
@@ -1014,8 +1028,17 @@ footer .border-top {
 }
 .loadMore .spin {
   animation: spin 1s linear infinite;
+  transform-origin: center;
+  min-width: 24px;
+  height: 24px;
+}
+.loadMore .spin svg {
   width: 24px;
   height: 24px;
+  fill: var(--mainColor);
+}
+.loadMore .spin svg * {
+  fill: var(--mainColor);
 }
 @keyframes spin {
   0% {
@@ -2232,6 +2255,14 @@ footer .border-top {
   height: 20px;
   transition: var(--transition);
 }
+.projectDetailsPage .projectInfo .actions .action svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--mainColor);
+}
+.projectDetailsPage .projectInfo .actions .action svg * {
+  fill: var(--mainColor);
+}
 .projectDetailsPage .projectInfo .actions .action span {
   padding-left: 8px;
   white-space: nowrap;
@@ -2242,6 +2273,12 @@ footer .border-top {
 }
 .projectDetailsPage .projectInfo .actions .action:hover img {
   filter: brightness(0) invert(1);
+}
+.projectDetailsPage .projectInfo .actions .action:hover svg {
+  fill: var(--whiteColor);
+}
+.projectDetailsPage .projectInfo .actions .action:hover svg * {
+  fill: var(--whiteColor);
 }
 
 .faqSection {
@@ -2302,6 +2339,14 @@ footer .border-top {
   -o-object-fit: contain;
      object-fit: contain;
   filter: brightness(0) invert(1);
+}
+
+.themeColor {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 20;
 }
 
 @media screen and (max-width: 768px) {

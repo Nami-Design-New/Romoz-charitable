@@ -191,6 +191,37 @@ $(document).ready(function () {
     });
   });
 });
+
+// theme costomization
+$(document).ready(function () {
+  // Retrieve values ​​from local storage if available
+  var mainColor = localStorage.getItem('mainColor');
+  var mainColor20 = localStorage.getItem('mainColor20');
+  var mainColor10 = localStorage.getItem('mainColor10');
+
+if (mainColor) {
+      $(':root').css('--mainColor', mainColor);
+      $('#colorInput').val(mainColor);
+    }
+  // Update values ​​if available in local storage
+  if (mainColor) $(':root').css('--mainColor', mainColor);
+  if (mainColor20) $(':root').css('--mainColor20', mainColor20);
+  if (mainColor10) $(':root').css('--mainColor10', mainColor10);
+
+  $('#colorInput').on('input', function () {
+    var newColor = $(this).val();
+    $(':root').css('--mainColor', newColor);
+    $(':root').css('--mainColor20', newColor + '33'); // Adds 20% opacity
+    $(':root').css('--mainColor10', newColor + '1a'); // Adds 10% opacity
+
+
+    // Save the values ​​to local storage
+    localStorage.setItem('mainColor', newColor);
+    localStorage.setItem('mainColor20', newColor + '33');
+    localStorage.setItem('mainColor10', newColor + '1a');
+  });
+});
+
 // ////////////////////////////////////////
 // ////////////////////////////////////////
 // ////////////////////////////////////////

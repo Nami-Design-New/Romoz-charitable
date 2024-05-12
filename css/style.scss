@@ -548,7 +548,7 @@ footer {
     }
     &:hover {
       p {
-        color: var(--goldColor);
+        color: var(--mainColor);
       }
     }
   }
@@ -556,7 +556,7 @@ footer {
     filter: brightness(0) invert(1) contrast(0.8);
   }
   .border-top {
-    --bs-border-color: #eee5cb;
+    --bs-border-color: var(--mainColor10);
   }
 }
 .swiperControl {
@@ -915,6 +915,14 @@ footer {
             height: 20px;
             transition: var(--transition);
           }
+          svg{
+            width: 20px;
+            height: 20px;
+            fill: var(--mainColor);
+            * {
+              fill: var(--mainColor);
+            }
+          }
           span {
             padding-left: 8px;
             white-space: nowrap;
@@ -924,6 +932,12 @@ footer {
             color: var(--whiteColor);
             img {
               filter: brightness(0) invert(1);
+            }
+            svg{
+              fill: var(--whiteColor);
+              * {
+                fill: var(--whiteColor);
+              }
             }
           }
         }
@@ -982,8 +996,17 @@ footer {
   padding: 8px;
   .spin {
     animation: spin 1s linear infinite;
-    width: 24px;
+    transform-origin: center;
+    min-width: 24px;
     height: 24px;
+    svg{
+      width: 24px;
+      height: 24px;
+      fill: var(--mainColor);
+      * {
+        fill: var(--mainColor);
+      }
+    }
   }
   @keyframes spin {
     0% {
@@ -2084,7 +2107,6 @@ footer {
         color: var(--darkColor);
         transition: var(--transition);
         border: 1px solid transparent;
-
         span {
           font-weight: bold;
         }
@@ -2156,6 +2178,14 @@ footer {
           height: 20px;
           transition: var(--transition);
         }
+        svg{
+          width: 20px;
+          height: 20px;
+          fill: var(--mainColor);
+          * {
+            fill: var(--mainColor);
+          }
+        }
         span {
           padding-left: 8px;
           white-space: nowrap;
@@ -2166,12 +2196,17 @@ footer {
           img {
             filter: brightness(0) invert(1);
           }
+          svg{
+            fill: var(--whiteColor);
+            * {
+              fill: var(--whiteColor);
+            }
+          }
         }
       }
     }
   }
 }
-
 .faqSection {
   margin-bottom: 40px;
   .container {
@@ -2206,7 +2241,6 @@ footer {
     --bs-accordion-active-bg: var(--mainColor10);
   }
 }
-
 .floatWhatsapp {
   position: fixed;
   z-index: 20;
@@ -2228,7 +2262,13 @@ footer {
     filter: brightness(0) invert(1);
   }
 }
-
+.themeColor{
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 20;
+}
 // responsive
 @media screen and (max-width: 768px) {
   h1 {
