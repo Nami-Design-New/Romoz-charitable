@@ -214,8 +214,8 @@ content {
   align-items: center;
 }
 .preloader .preloaderImg {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   -webkit-mask-image: url("../img/logo.svg");
           mask-image: url("../img/logo.svg");
   -webkit-mask-size: contain;
@@ -231,8 +231,8 @@ content {
   position: absolute;
   left: 0;
   top: 0;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   z-index: 2;
   background-color: var(--mainColor);
   transform: translateY(100%);
@@ -241,8 +241,8 @@ content {
 .preloader .preloaderImg::before {
   content: "";
   display: block;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   background-image: url("../img/logo.svg");
   background-size: contain;
   background-position: center;
@@ -939,12 +939,12 @@ footer .border-top {
   height: 40px;
   min-width: 40px;
   border-radius: 100px;
-  transition: var(--transition);
+  transition: height 0.3s ease, background-color 0.3s ease;
 }
 .projects .project .projectInfo .actions .action:has(span) {
   flex: 1;
   border-radius: 12px;
-  min-width: 110px;
+  min-width: 120px;
 }
 .projects .project .projectInfo .actions .action img {
   min-width: 20px;
@@ -2220,12 +2220,12 @@ footer .border-top {
   height: 40px;
   min-width: 40px;
   border-radius: 100px;
-  transition: var(--transition);
+  transition: height 0.3s ease, background-color 0.3s ease;
 }
 .projectDetailsPage .projectInfo .actions .action:has(span) {
   flex: 1;
   border-radius: 12px;
-  min-width: 110px;
+  min-width: 120px;
 }
 .projectDetailsPage .projectInfo .actions .action img {
   min-width: 20px;

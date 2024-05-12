@@ -195,8 +195,8 @@ content {
   justify-content: center;
   align-items: center;
   .preloaderImg {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     mask-image: url("../img/logo.svg");
     mask-size: contain;
     mask-position: center;
@@ -207,8 +207,8 @@ content {
       position: absolute;
       left: 0;
       top: 0;
-      width: 150px;
-      height: 150px;
+      width: 100px;
+      height: 100px;
       z-index: 2;
       background-color: var(--mainColor);
       transform: translateY(100%);
@@ -217,8 +217,8 @@ content {
     &::before {
       content: "";
       display: block;
-      width: 150px;
-      height: 150px;
+      width: 100px;
+      height: 100px;
       background-image: url("../img/logo.svg");
       background-size: contain;
       background-position: center;
@@ -904,11 +904,11 @@ footer {
           height: 40px;
           min-width: 40px;
           border-radius: 100px;
-          transition: var(--transition);
+          transition: height 0.3s ease, background-color 0.3s ease;
           &:has(span) {
             flex: 1;
             border-radius: 12px;
-            min-width: 110px;
+            min-width: 120px;
           }
           img {
             min-width: 20px;
@@ -2145,11 +2145,11 @@ footer {
         height: 40px;
         min-width: 40px;
         border-radius: 100px;
-        transition: var(--transition);
+        transition: height 0.3s ease, background-color 0.3s ease;
         &:has(span) {
           flex: 1;
           border-radius: 12px;
-          min-width: 110px;
+          min-width: 120px;
         }
         img {
           min-width: 20px;
