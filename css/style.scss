@@ -2171,6 +2171,42 @@ footer {
     }
   }
 }
+
+.faqSection {
+  margin-bottom: 40px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .description{
+      text-align: center;
+    }
+    .sectionTitle {
+      margin: auto;
+    }
+    .accordion-header {
+      border-radius: 16px;
+      button{
+        font-weight: bold;
+      }
+    }
+  }
+}
+.accordion-item {
+  --bs-accordion-border-color: var(--mainColor20);
+}
+.accordion-button {
+  border-radius: 8px !important;
+  &:focus {
+    border-color: var(--mainColor20);
+    box-shadow: unset;
+  }
+  &:not(.collapsed) {
+    --bs-accordion-active-color: var(--mainColor);
+    --bs-accordion-active-bg: var(--mainColor10);
+  }
+}
+
 // responsive
 @media screen and (max-width: 768px) {
   h1 {

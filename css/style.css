@@ -2244,6 +2244,43 @@ footer .border-top {
   filter: brightness(0) invert(1);
 }
 
+.faqSection {
+  margin-bottom: 40px;
+}
+.faqSection .container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.faqSection .container .description {
+  text-align: center;
+}
+.faqSection .container .sectionTitle {
+  margin: auto;
+}
+.faqSection .container .accordion-header {
+  border-radius: 16px;
+}
+.faqSection .container .accordion-header button {
+  font-weight: bold;
+}
+
+.accordion-item {
+  --bs-accordion-border-color: var(--mainColor20);
+}
+
+.accordion-button {
+  border-radius: 8px !important;
+}
+.accordion-button:focus {
+  border-color: var(--mainColor20);
+  box-shadow: unset;
+}
+.accordion-button:not(.collapsed) {
+  --bs-accordion-active-color: var(--mainColor);
+  --bs-accordion-active-bg: var(--mainColor10);
+}
+
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 26px;
