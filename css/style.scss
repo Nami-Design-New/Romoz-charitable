@@ -739,6 +739,7 @@ footer {
     height: 100%;
     border-radius: 16px;
     transition: var(--transition);
+    // background-color: #fbfbfb;
     .shareProject {
       position: absolute;
       top: 8px;
@@ -813,7 +814,7 @@ footer {
       flex-direction: column;
       gap: 4px;
       flex: 1;
-      padding: 16px;
+      padding: 12px;
       .title {
         font-weight: bold;
         font-size: 16px;
@@ -841,6 +842,7 @@ footer {
           background-color: #eeeeee;
           color: var(--darkColor);
           transition: var(--transition);
+          border: 1px solid transparent;
           span {
             font-weight: bold;
           }
@@ -848,6 +850,7 @@ footer {
           &:hover {
             background-color: var(--mainColor10);
             color: var(--mainColor);
+            border: 1px solid var(--mainColor20);
           }
           &.donate {
             min-width: 250px;
@@ -859,8 +862,17 @@ footer {
         align-items: center;
         justify-content: center;
         gap: 8px;
+        flex-wrap: wrap;
+        background-color: var(--mainColor20);
+        padding: 4px;
+        border-radius: 100px;
+        &:has(.action span) {
+          border-radius: 16px;
+          padding: 8px;
+        }
         .inputDiv {
           position: relative;
+          background-color: var(--whiteColor);
           border: 1px solid var(--mainColor20);
           padding: 8px 16px;
           border-radius: 100px;
@@ -888,21 +900,24 @@ footer {
           gap: 8px;
           padding: 8px;
           justify-content: center;
-          background-color: var(--mainColor10);
+          background-color: var(--whiteColor);
           height: 40px;
           min-width: 40px;
           border-radius: 100px;
           transition: var(--transition);
           &:has(span) {
-           flex: 1; 
+            flex: 1;
+            border-radius: 12px;
+            min-width: 110px;
           }
           img {
             min-width: 20px;
             height: 20px;
             transition: var(--transition);
           }
-          span{
+          span {
             padding-left: 8px;
+            white-space: nowrap;
           }
           &:hover {
             background-color: var(--mainColor);
@@ -933,6 +948,7 @@ footer {
 }
 .quantity {
   position: relative;
+  background-color: var(--whiteColor);
   border: 1px solid var(--mainColor20);
   padding: 0px 8px;
   border-radius: 100px;
@@ -2033,7 +2049,6 @@ footer {
       transition: var(--transition);
       object-fit: cover;
       max-height: 600px;
-     
     }
   }
   .projectInfo {
@@ -2068,6 +2083,8 @@ footer {
         background-color: #eeeeee;
         color: var(--darkColor);
         transition: var(--transition);
+        border: 1px solid transparent;
+
         span {
           font-weight: bold;
         }
@@ -2075,6 +2092,7 @@ footer {
         &:hover {
           background-color: var(--mainColor10);
           color: var(--mainColor);
+          border: 1px solid var(--mainColor20);
         }
         &.donate {
           min-width: 250px;
@@ -2086,8 +2104,16 @@ footer {
       align-items: center;
       justify-content: center;
       gap: 8px;
+      flex-wrap: wrap;
+      background-color: var(--mainColor20);
+      padding: 8px;
+      border-radius: 100px;
+      &:has(.action span) {
+        border-radius: 16px;
+      }
       .inputDiv {
         position: relative;
+        background-color: var(--whiteColor);
         border: 1px solid var(--mainColor20);
         padding: 8px 16px;
         border-radius: 100px;
@@ -2115,21 +2141,24 @@ footer {
         gap: 8px;
         padding: 8px;
         justify-content: center;
-        background-color: var(--mainColor10);
+        background-color: var(--whiteColor);
         height: 40px;
         min-width: 40px;
         border-radius: 100px;
         transition: var(--transition);
         &:has(span) {
-         flex: 1; 
+          flex: 1;
+          border-radius: 12px;
+          min-width: 110px;
         }
         img {
           min-width: 20px;
           height: 20px;
           transition: var(--transition);
         }
-        span{
+        span {
           padding-left: 8px;
+          white-space: nowrap;
         }
         &:hover {
           background-color: var(--mainColor);

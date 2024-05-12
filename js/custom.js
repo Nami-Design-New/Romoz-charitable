@@ -170,30 +170,23 @@ $(document).ready(function () {
       $("#alertMessage").slideDown().delay(1500).fadeOut();
     });
   });
-  $(".project , .projectDetailsPage").each(function() {
+  $(".project , .projectDetailsPage").each(function () {
     var $project = $(this);
     var $gifts = $project.find(".gifts");
     var $inputDiv = $project.find(".inputDiv");
     var $quantity = $project.find(".quantity");
-    // Hide inputDiv and quantity initially
     $inputDiv.hide();
     $quantity.hide();
-    $gifts.find('.gift, .donate').click(function(){
-      $gifts.find('.gift, .donate').removeClass('active');
-      $(this).addClass('active');
-      if ($(this).hasClass('gift') || $(this).hasClass('donate')) {
-        if ($(this).hasClass('active')) {
-          $project.find('.action span').remove();
-        } else {
-          $project.find('.action span').show();
-        }
-      }
-      if ($(this).hasClass('gift')) {
+    $gifts.find(".gift, .donate").click(function () {
+      $gifts.find(".gift, .donate").removeClass("active");
+      $(this).addClass("active");
+      $project.find(".action span").remove();
+      if ($(this).hasClass("gift")) {
         $quantity.show();
         $inputDiv.hide();
-      } else if ($(this).hasClass('donate')) {
+      } else if ($(this).hasClass("donate")) {
         $quantity.hide();
-        $inputDiv.show();
+        $inputDiv.show().find("input").focus();
       }
     });
   });

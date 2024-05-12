@@ -844,7 +844,7 @@ footer .border-top {
   flex-direction: column;
   gap: 4px;
   flex: 1;
-  padding: 16px;
+  padding: 12px;
 }
 .projects .project .projectInfo .title {
   font-weight: bold;
@@ -874,6 +874,7 @@ footer .border-top {
   background-color: #eeeeee;
   color: var(--darkColor);
   transition: var(--transition);
+  border: 1px solid transparent;
 }
 .projects .project .projectInfo .gifts .donate span,
 .projects .project .projectInfo .gifts .gift span {
@@ -884,6 +885,7 @@ footer .border-top {
 .projects .project .projectInfo .gifts .gift:hover {
   background-color: var(--mainColor10);
   color: var(--mainColor);
+  border: 1px solid var(--mainColor20);
 }
 .projects .project .projectInfo .gifts .donate.donate,
 .projects .project .projectInfo .gifts .gift.donate {
@@ -894,9 +896,18 @@ footer .border-top {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  flex-wrap: wrap;
+  background-color: var(--mainColor20);
+  padding: 4px;
+  border-radius: 100px;
+}
+.projects .project .projectInfo .actions:has(.action span) {
+  border-radius: 16px;
+  padding: 8px;
 }
 .projects .project .projectInfo .actions .inputDiv {
   position: relative;
+  background-color: var(--whiteColor);
   border: 1px solid var(--mainColor20);
   padding: 8px 16px;
   border-radius: 100px;
@@ -924,7 +935,7 @@ footer .border-top {
   gap: 8px;
   padding: 8px;
   justify-content: center;
-  background-color: var(--mainColor10);
+  background-color: var(--whiteColor);
   height: 40px;
   min-width: 40px;
   border-radius: 100px;
@@ -932,6 +943,8 @@ footer .border-top {
 }
 .projects .project .projectInfo .actions .action:has(span) {
   flex: 1;
+  border-radius: 12px;
+  min-width: 110px;
 }
 .projects .project .projectInfo .actions .action img {
   min-width: 20px;
@@ -940,6 +953,7 @@ footer .border-top {
 }
 .projects .project .projectInfo .actions .action span {
   padding-left: 8px;
+  white-space: nowrap;
 }
 .projects .project .projectInfo .actions .action:hover {
   background-color: var(--mainColor);
@@ -964,6 +978,7 @@ footer .border-top {
 
 .quantity {
   position: relative;
+  background-color: var(--whiteColor);
   border: 1px solid var(--mainColor20);
   padding: 0px 8px;
   border-radius: 100px;
@@ -2141,6 +2156,7 @@ footer .border-top {
   background-color: #eeeeee;
   color: var(--darkColor);
   transition: var(--transition);
+  border: 1px solid transparent;
 }
 .projectDetailsPage .projectInfo .gifts .donate span,
 .projectDetailsPage .projectInfo .gifts .gift span {
@@ -2151,6 +2167,7 @@ footer .border-top {
 .projectDetailsPage .projectInfo .gifts .gift:hover {
   background-color: var(--mainColor10);
   color: var(--mainColor);
+  border: 1px solid var(--mainColor20);
 }
 .projectDetailsPage .projectInfo .gifts .donate.donate,
 .projectDetailsPage .projectInfo .gifts .gift.donate {
@@ -2161,9 +2178,17 @@ footer .border-top {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  flex-wrap: wrap;
+  background-color: var(--mainColor20);
+  padding: 8px;
+  border-radius: 100px;
+}
+.projectDetailsPage .projectInfo .actions:has(.action span) {
+  border-radius: 16px;
 }
 .projectDetailsPage .projectInfo .actions .inputDiv {
   position: relative;
+  background-color: var(--whiteColor);
   border: 1px solid var(--mainColor20);
   padding: 8px 16px;
   border-radius: 100px;
@@ -2191,7 +2216,7 @@ footer .border-top {
   gap: 8px;
   padding: 8px;
   justify-content: center;
-  background-color: var(--mainColor10);
+  background-color: var(--whiteColor);
   height: 40px;
   min-width: 40px;
   border-radius: 100px;
@@ -2199,6 +2224,8 @@ footer .border-top {
 }
 .projectDetailsPage .projectInfo .actions .action:has(span) {
   flex: 1;
+  border-radius: 12px;
+  min-width: 110px;
 }
 .projectDetailsPage .projectInfo .actions .action img {
   min-width: 20px;
@@ -2207,6 +2234,7 @@ footer .border-top {
 }
 .projectDetailsPage .projectInfo .actions .action span {
   padding-left: 8px;
+  white-space: nowrap;
 }
 .projectDetailsPage .projectInfo .actions .action:hover {
   background-color: var(--mainColor);
