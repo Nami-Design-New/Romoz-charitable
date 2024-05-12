@@ -2269,6 +2269,27 @@ footer {
   transform: translateY(-50%);
   z-index: 20;
 }
+
+.giftForLover{
+  margin-bottom: 40px;
+  .container{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    
+    .sectionTitle{
+      margin: auto;
+    }
+    .giftImg{
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      
+    }
+  }
+}
+
+
 // responsive
 @media screen and (max-width: 768px) {
   h1 {

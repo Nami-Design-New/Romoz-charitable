@@ -2349,6 +2349,24 @@ footer .border-top {
   z-index: 20;
 }
 
+.giftForLover {
+  margin-bottom: 40px;
+}
+.giftForLover .container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.giftForLover .container .sectionTitle {
+  margin: auto;
+}
+.giftForLover .container .giftImg {
+  width: 100%;
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 26px;
