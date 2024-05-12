@@ -2178,7 +2178,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    .description{
+    .description {
       text-align: center;
     }
     .sectionTitle {
@@ -2186,7 +2186,7 @@ footer {
     }
     .accordion-header {
       border-radius: 16px;
-      button{
+      button {
         font-weight: bold;
       }
     }
@@ -2204,6 +2204,28 @@ footer {
   &:not(.collapsed) {
     --bs-accordion-active-color: var(--mainColor);
     --bs-accordion-active-bg: var(--mainColor10);
+  }
+}
+
+.floatWhatsapp {
+  position: fixed;
+  z-index: 20;
+  left: 20px;
+  bottom: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  width: 56px;
+  height: 56px;
+  background-color: #25d366;
+  color: #fff;
+  box-shadow: 0px 4px 8px rgba(37, 211, 102, 0.1882352941);
+  img{
+    width: 24px;
+    height: 24px;
+    object-fit: contain;  
+    filter: brightness(0) invert(1);
   }
 }
 
