@@ -156,7 +156,7 @@ button {
 }
 .form-select,
 .form-control {
-  min-height: 54px;
+  min-height: 48px;
   &:focus {
     box-shadow: none;
   }
@@ -915,7 +915,7 @@ footer {
             height: 20px;
             transition: var(--transition);
           }
-          svg{
+          svg {
             width: 20px;
             height: 20px;
             fill: var(--mainColor);
@@ -933,7 +933,7 @@ footer {
             img {
               filter: brightness(0) invert(1);
             }
-            svg{
+            svg {
               fill: var(--whiteColor);
               * {
                 fill: var(--whiteColor);
@@ -999,7 +999,7 @@ footer {
     transform-origin: center;
     min-width: 24px;
     height: 24px;
-    svg{
+    svg {
       width: 24px;
       height: 24px;
       fill: var(--mainColor);
@@ -1259,6 +1259,7 @@ footer {
     aspect-ratio: 1;
   }
 }
+.dedicationModal,
 .donateQuickly {
   .modal-content {
     border-radius: 16px;
@@ -2178,7 +2179,7 @@ footer {
           height: 20px;
           transition: var(--transition);
         }
-        svg{
+        svg {
           width: 20px;
           height: 20px;
           fill: var(--mainColor);
@@ -2196,7 +2197,7 @@ footer {
           img {
             filter: brightness(0) invert(1);
           }
-          svg{
+          svg {
             fill: var(--whiteColor);
             * {
               fill: var(--whiteColor);
@@ -2255,14 +2256,14 @@ footer {
   background-color: #25d366;
   color: #fff;
   box-shadow: 0px 4px 8px rgba(37, 211, 102, 0.1882352941);
-  img{
+  img {
     width: 24px;
     height: 24px;
-    object-fit: contain;  
+    object-fit: contain;
     filter: brightness(0) invert(1);
   }
 }
-.themeColor{
+.themeColor {
   position: fixed;
   top: 50%;
   right: 0;
@@ -2270,26 +2271,156 @@ footer {
   z-index: 20;
 }
 
-.giftForLover{
+.giftForLover {
   margin-bottom: 40px;
-  .container{
+  .container {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    
-    .sectionTitle{
+    width: min(100% - 8px, 800px);
+    margin: auto;
+    .sectionTitle {
       margin: auto;
     }
-    .giftImg{
-      width: 100%;
+
+    .giftView {
+      display: flex;
+      position: relative;
       aspect-ratio: 16/9;
-      object-fit: cover;
-      
+      isolation: isolate;
+      padding: 4% 5%;
+      display: flex;
+      align-items: end;
+      gap: 10%;
+      margin-bottom: 24px;
+      .giftImg {
+        width: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 12px;
+      }
+      .sender,
+      .receiver {
+        flex: 1;
+        font-size: 16px;
+        text-wrap: nowrap;
+        @media screen and (max-width: 768px) {
+          font-size: 14px;
+        }
+        @media screen and (max-width: 576px) {
+          font-size: 12px;
+        }
+      }
+    }
+    .gift {
+      display: flex;
+      width: fit-content;
+      margin: auto;
+      min-width: 180px;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      padding: 8px 8px;
+      border-radius: 100px;
+      background-color: var(--lightGrayColor);
+      color: var(--darkColor);
+      span {
+        font-weight: bold;
+      }
+    }
+    .total {
+      font-weight: bold;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      .price {
+        font-weight: bold;
+        span {
+          font-size: 24px;
+          color: var(--mainColor);
+        }
+      }
+    }
+    .actions {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+
+      .action {
+        color: var(--darkColor);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px;
+        justify-content: center;
+        background-color: var(--mainColor10);
+        height: 40px;
+        min-width: 40px;
+        transition: height 0.3s ease, background-color 0.3s ease;
+        flex: 1;
+        border-radius: 12px;
+        min-width: 120px;
+        img {
+          min-width: 20px;
+          height: 20px;
+          transition: var(--transition);
+        }
+        svg {
+          width: 20px;
+          height: 20px;
+          fill: var(--mainColor);
+          * {
+            fill: var(--mainColor);
+          }
+        }
+        span {
+          padding-left: 8px;
+          white-space: nowrap;
+        }
+        &:hover {
+          background-color: var(--mainColor);
+          color: var(--whiteColor);
+          img {
+            filter: brightness(0) invert(1);
+          }
+          svg {
+            fill: var(--whiteColor);
+            * {
+              fill: var(--whiteColor);
+            }
+          }
+        }
+      }
     }
   }
 }
-
-
+.dedicationModal {
+  .btn-group {
+    label {
+      font-weight: normal !important;
+      justify-content: center;
+      font-size: 14px;
+    }
+    .btn-outline-primary {
+      --bs-btn-color: var(--mainColor);
+      --bs-btn-border-color: var(--mainColor);
+      --bs-btn-hover-bg: var(--mainColor);
+      --bs-btn-hover-border-color: var(--mainColor);
+      --bs-btn-active-bg: var(--mainColor);
+      --bs-btn-active-border-color: var(--mainColor);
+      --bs-btn-disabled-color: var(--mainColor);
+      --bs-btn-disabled-border-color: var(--mainColor);
+    }
+  }
+}
 // responsive
 @media screen and (max-width: 768px) {
   h1 {
@@ -2346,4 +2477,8 @@ footer {
   P {
     font-size: 15px;
   }
+}
+
+.modal-backdrop {
+  --bs-backdrop-opacity: 0.7;
 }

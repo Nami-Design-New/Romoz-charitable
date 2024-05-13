@@ -188,7 +188,7 @@ button {
 
 .form-select,
 .form-control {
-  min-height: 54px;
+  min-height: 48px;
 }
 .form-select:focus,
 .form-control:focus {
@@ -1306,9 +1306,11 @@ footer .border-top {
   aspect-ratio: 1;
 }
 
+.dedicationModal .modal-content,
 .donateQuickly .modal-content {
   border-radius: 16px;
 }
+.dedicationModal .modalHeader,
 .donateQuickly .modalHeader {
   display: flex;
   align-items: center;
@@ -1317,27 +1319,33 @@ footer .border-top {
   padding: 16px;
   background-color: var(--mainColor10);
 }
+.dedicationModal .modalHeader .modalTitle,
 .donateQuickly .modalHeader .modalTitle {
   font-weight: bold;
 }
+.dedicationModal .modalHeader .btn,
 .donateQuickly .modalHeader .btn {
   font-size: 16px;
   font-weight: bold;
 }
+.dedicationModal .modalForm,
 .donateQuickly .modalForm {
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
+.dedicationModal .modalForm .formGroup,
 .donateQuickly .modalForm .formGroup {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
+.dedicationModal .modalForm .formGroup label,
 .donateQuickly .modalForm .formGroup label {
   font-weight: bold;
 }
+.dedicationModal .modalForm .btnSubmit,
 .donateQuickly .modalForm .btnSubmit {
   padding: 12px;
   text-align: center;
@@ -2356,15 +2364,151 @@ footer .border-top {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: min(100% - 8px, 800px);
+  margin: auto;
 }
 .giftForLover .container .sectionTitle {
   margin: auto;
 }
-.giftForLover .container .giftImg {
+.giftForLover .container .giftView {
+  display: flex;
+  position: relative;
+  aspect-ratio: 16/9;
+  isolation: isolate;
+  padding: 4% 5%;
+  display: flex;
+  align-items: end;
+  gap: 10%;
+  margin-bottom: 24px;
+}
+.giftForLover .container .giftView .giftImg {
   width: 100%;
   aspect-ratio: 16/9;
   -o-object-fit: cover;
      object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 12px;
+}
+.giftForLover .container .giftView .sender,
+.giftForLover .container .giftView .receiver {
+  flex: 1;
+  font-size: 16px;
+  text-wrap: nowrap;
+}
+@media screen and (max-width: 768px) {
+  .giftForLover .container .giftView .sender,
+  .giftForLover .container .giftView .receiver {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .giftForLover .container .giftView .sender,
+  .giftForLover .container .giftView .receiver {
+    font-size: 12px;
+  }
+}
+.giftForLover .container .gift {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  min-width: 180px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 8px;
+  border-radius: 100px;
+  background-color: var(--lightGrayColor);
+  color: var(--darkColor);
+}
+.giftForLover .container .gift span {
+  font-weight: bold;
+}
+.giftForLover .container .total {
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.giftForLover .container .total .price {
+  font-weight: bold;
+}
+.giftForLover .container .total .price span {
+  font-size: 24px;
+  color: var(--mainColor);
+}
+.giftForLover .container .actions {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.giftForLover .container .actions .action {
+  color: var(--darkColor);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  justify-content: center;
+  background-color: var(--mainColor10);
+  height: 40px;
+  min-width: 40px;
+  transition: height 0.3s ease, background-color 0.3s ease;
+  flex: 1;
+  border-radius: 12px;
+  min-width: 120px;
+}
+.giftForLover .container .actions .action img {
+  min-width: 20px;
+  height: 20px;
+  transition: var(--transition);
+}
+.giftForLover .container .actions .action svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--mainColor);
+}
+.giftForLover .container .actions .action svg * {
+  fill: var(--mainColor);
+}
+.giftForLover .container .actions .action span {
+  padding-left: 8px;
+  white-space: nowrap;
+}
+.giftForLover .container .actions .action:hover {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+}
+.giftForLover .container .actions .action:hover img {
+  filter: brightness(0) invert(1);
+}
+.giftForLover .container .actions .action:hover svg {
+  fill: var(--whiteColor);
+}
+.giftForLover .container .actions .action:hover svg * {
+  fill: var(--whiteColor);
+}
+
+.dedicationModal .btn-group label {
+  font-weight: normal !important;
+  justify-content: center;
+  font-size: 14px;
+}
+.dedicationModal .btn-group .btn-outline-primary {
+  --bs-btn-color: var(--mainColor);
+  --bs-btn-border-color: var(--mainColor);
+  --bs-btn-hover-bg: var(--mainColor);
+  --bs-btn-hover-border-color: var(--mainColor);
+  --bs-btn-active-bg: var(--mainColor);
+  --bs-btn-active-border-color: var(--mainColor);
+  --bs-btn-disabled-color: var(--mainColor);
+  --bs-btn-disabled-border-color: var(--mainColor);
 }
 
 @media screen and (max-width: 768px) {
@@ -2422,4 +2566,7 @@ footer .border-top {
   P {
     font-size: 15px;
   }
+}
+.modal-backdrop {
+  --bs-backdrop-opacity: 0.7;
 }/*# sourceMappingURL=style.css.map */

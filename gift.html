@@ -116,18 +116,100 @@
     <!-- gift for lover -->
     <section class="giftForLover">
       <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-xl-6 p-1 m-auto">
-            <h2 class="sectionTitle"> إهداء لمن تحب </h2>
-            <div class="giftView">
-              
-              <img class="giftImg" src="img/giftForLover.jpeg" alt="">
+        <h2 class="sectionTitle"> إهداء لمن تحب </h2>
+        <div class="giftView">
+          <img class="giftImg" src="img/giftForLover.jpg" alt="">
+          <h4 class="sender"> محمود جمال عبد العزيز الكومي </h4>
+          <h4 class="receiver"> عماد مجدي سلام المغربي </h4>
+        </div>
+        <button class="gift"> اهداء بــ<span> 100 </span> ريال </button>
+        <div class="total">
+          <p class="name"> أهدي من تحب حسنات جارية في مشروع أسس مسجداً </p>
+          <h3 class="price"> <span> 100 </span> ريال </h3>
+        </div>
+        <div class="actions">
+          <div class="quantity">
+            <button class="min"> - </button>
+            <input type="text" class="qty" value="1" min="1" />
+            <button class="plus"> + </button>
+          </div>
+          <a href="#!" class="action" data-bs-toggle="modal" data-bs-target="#dedicationModal">
+            <!-- ICON -->
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="40"
+              height="40" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512"
+              xml:space="preserve">
+              <g>
+                <circle cx="7" cy="22" r="2" fill="#f7941d" opacity="1" data-original="#000000"></circle>
+                <circle cx="17" cy="22" r="2" fill="#f7941d" opacity="1" data-original="#000000"></circle>
+                <path d="M23 3h-2V1a1 1 0 0 0-2 0v2h-2a1 1 0 0 0 0 2h2v2a1 1 0 0 0 2 0V5h2a1 1 0 0 0 0-2Z"
+                  fill="#f7941d" opacity="1" data-original="#000000"></path>
+                <path
+                  d="M21.771 9.726a.994.994 0 0 0-1.162.806A3 3 0 0 1 17.657 13H5.418l-.94-8H13a1 1 0 0 0 0-2H4.242L4.2 2.648A3 3 0 0 0 1.222 0H1a1 1 0 0 0 0 2h.222a1 1 0 0 1 .993.883l1.376 11.7A5 5 0 0 0 8.557 19H19a1 1 0 0 0 0-2H8.557a3 3 0 0 1-2.829-2h11.929a5 5 0 0 0 4.921-4.112 1 1 0 0 0-.807-1.162Z"
+                  fill="#f7941d" opacity="1" data-original="#000000"></path>
+              </g>
+            </svg>
+            <span> اضافة للسلة </span>
+          </a>
+          <a href="#!" class="action" data-bs-toggle="modal" data-bs-target="#dedicationModal">
+            <!-- ICON -->
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="40"
+              height="40" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512"
+              xml:space="preserve">
+              <g>
+                <path
+                  d="M20 7h-1.738A5.137 5.137 0 0 0 20 3a1 1 0 0 0-2 0c0 2.622-2.371 3.53-4.174 3.841A9.332 9.332 0 0 0 15 3a3 3 0 0 0-6 0 9.332 9.332 0 0 0 1.174 3.841C8.371 6.53 6 5.622 6 3a1 1 0 0 0-2 0 5.137 5.137 0 0 0 1.738 4H4a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2v5a5.006 5.006 0 0 0 5 5h10a5.006 5.006 0 0 0 5-5v-5a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4Zm-8-5a1 1 0 0 1 1 1 7.71 7.71 0 0 1-1 3.013A7.71 7.71 0 0 1 11 3a1 1 0 0 1 1-1ZM2 11a2 2 0 0 1 2-2h7v3H2Zm2 8v-5h7v8H7a3 3 0 0 1-3-3Zm16 0a3 3 0 0 1-3 3h-4v-8h7Zm-7-7V9h7a2 2 0 0 1 2 2v1Z"
+                  fill="#f7941d" opacity="1" data-original="#000000"></path>
+              </g>
+            </svg>
+            <span> إهداء الأن </span>
+          </a>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade dedicationModal" id="dedicationModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modalHeader">
+              <h4 class="modalTitle"> إهداء تبرع </h4>
+              <button class="btn" data-bs-dismiss="modal"> X </button>
             </div>
+            <form class="modalForm">
+              <div class="formGroup">
+                <label for="receiverName"> اسم المهدى إليه </label>
+                <input id="receiverName" type="text" class="form-control" placeholder=" الشخص الذي ستصلة الهدية ">
+              </div>
+              <div class="formGroup">
+                <label for="phone">رقم جوال المهدى إليه </label>
+                <input id="phone" type="text" class="form-control" placeholder=" 966 555 555 555 ">
+              </div>
+              <div class="formGroup">
+                <label for="senderName"> اسم المرسل </label>
+                <input id="senderName" type="text" class="form-control" placeholder=" اسمك انت ">
+              </div>
+              <div class="formGroup">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="sendToMe" value="option1" />
+                  <label class="form-check-label" for="sendToMe"> ارسال نسخة الي جوالي </label>
+                </div>
+              </div>
+              <div class="formGroup">
+                <div class="btn-group" role="group">
+                  <input type="radio" class="btn-check" name="btnradio" id="btncheck1" autocomplete="off" checked />
+                  <label class="btn btn-outline-primary" for="btncheck1"> ارسال الان </label>
+                  <input type="radio" class="btn-check" name="btnradio" id="btncheck2" autocomplete="off" />
+                  <label class="btn btn-outline-primary" for="btncheck2"> ارسال في وقت محدد </label>
+                </div>
+              </div>
+              <div class="formGroup dateGroup">
+                <label for="date"> وقت الارسال </label>
+                <input id="date" type="datetime-local" class="form-control">
+              </div>
+              <button type="submit" class="btn btnSubmit"> ارسال الهدية </button>
+            </form>
           </div>
         </div>
       </div>
     </section>
-
     <!-- themeColor -->
     <div class="themeColor">
       <input type="color" id="colorInput" class="color-input">
@@ -221,6 +303,29 @@
   <!-- main -->
   <script src="js/main.js"></script>
   <script src="js/custom.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.dateGroup').hide();
+      $('input[name="btnradio"]').change(function () {
+        if ($(this).attr('id') === 'btncheck2') {
+          $('.dateGroup').show();
+        } else {
+          $('.dateGroup').hide();
+        }
+      });
+    });
+
+    $(document).ready(function () {
+      $('#senderName').on('input', function () {
+        var sender = $(this).val();
+        $('.giftView .sender').text(sender);
+      });
+      $('#receiverName').on('input', function () {
+        var receiver = $(this).val();
+        $('.giftView .receiver').text(receiver);
+      });
+    });
+  </script>
 </body>
 
 </html>
